@@ -1,0 +1,160 @@
+Call _item_descriptor_abc::__init_subclass__(_immutable_item_descriptor_abc, {'readonly': True})
+Call _item_descriptor_abc::__init_subclass__(_context_item_descriptor, {})
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001216CEE8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001216CEE8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000FEF03A8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000FEF03A8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000163E0708>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000163E0708>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000163E08E8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000163E08E8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000016BF4828>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000016BF4828>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000D84EBE8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000D84EBE8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000D84EDC8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000D84EDC8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011E0FD08>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011E0FD08>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011B3FCA8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011B3FCA8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011B3FE88>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000011B3FE88>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000119D12E8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000119D12E8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001678A1C8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001678A1C8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+path:  none lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+path:  none lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+path:  none lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+path:  none lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+path:  none lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+path:  ../firmware/Debug/firmware.mem lib_dir:  D:/docs/FPGA/propel_soc/propel_soc/.lib
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001678A888>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001678A888>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000017151E28>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000017151E28>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000119D1288>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000119D1288>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000FB8A408>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000000FB8A408>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8C708>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8C708>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8CEE8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8CEE8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8CDC8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000002A8CDC8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001E277888>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001E277888>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001E277048>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001E277048>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000014B1FB88>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000014B1FB88>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000014B1FE88>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x0000000014B1FE88>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001889E888>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001889E888>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\rtl\gpio1_bb.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\gpio1.cfg 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\misc\gpio1_tmpl.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\misc\gpio1_tmpl.vhd 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\rtl\gpio1.v 
+Warning: No directory "ldc" in IP module(C:/Users/Dominic/PropelIPLocal/latticesemi.com_ip_gpio_1.4.0)
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\testbench\dut_params.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\testbench\dut_inst.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\design.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\component.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\gpio1.ipx 
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001889E9A8>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001889E9A8>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\rtl\cpu0_bb.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\cpu0.cfg 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\misc\cpu0_tmpl.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\misc\cpu0_tmpl.vhd 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\rtl\cpu0.v 
+Warning: No directory "ldc" in IP module(C:/Users/Dominic/PropelIPLocal/latticesemi.com_ip_riscv_mc_2.0.0)
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\testbench\dut_params.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\testbench\dut_inst.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\design.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\component.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\cpu0\2.0.0\cpu0.ipx 
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001958A888>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x000000001958A888>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+WARNING: missing driver HDL files.
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\rtl\apb0_bb.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\apb0.cfg 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\misc\apb0_tmpl.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\misc\apb0_tmpl.vhd 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\rtl\apb0.v 
+Warning: No directory "ldc" in IP module(C:/lscc/propel/2.0/builder/rtf/ip/common/apb_interconnect)
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\testbench\dut_params.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\testbench\dut_inst.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\design.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\component.xml 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\apb0.ipx 
+"C:/lscc/propel/2.0/builder/rtf/ispfpga\data\python\nt64\bin\python" "D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\module\apb0\1.0.6\testbench/create_apb_interconnect_top.py"
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000192EC228>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000192EC228>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Call _item_descriptor_abc::__init_subclass__(__context_item, {'readonly': False, 'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000192EC948>})
+Call _context_item_abc::__init_subclass__(__context_item, {'context': <ipengine.ip_instance.instance.EvalSettings object at 0x00000000192EC948>}), __class__:_context_item_abc
+_context_proxy_abc::__prepare__ is called
+_context_proxy_abc::__new__ is called
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\rtl\gpio1_bb.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\gpio1.cfg 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\misc\gpio1_tmpl.v 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\misc\gpio1_tmpl.vhd 
+Writing D:\docs\FPGA\propel_soc\propel_soc\.lib\latticesemi.com\ip\gpio1\1.4.0\rtl\gpio1.v 

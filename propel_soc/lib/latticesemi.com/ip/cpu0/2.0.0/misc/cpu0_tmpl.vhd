@@ -3,6 +3,7 @@ component cpu0 is
         clk_i: in std_logic;
         rst_n_i: in std_logic;
         system_resetn_o: out std_logic;
+        irq2_i: in std_logic_vector(0 to 0);
         irq1_i: in std_logic_vector(0 to 0);
         irq0_i: in std_logic_vector(0 to 0);
         timer_irq_o: out std_logic;
@@ -35,6 +36,7 @@ __: cpu0 port map(
     clk_i=>,
     rst_n_i=>,
     system_resetn_o=>,
+    irq2_i=>,
     irq1_i=>,
     irq0_i=>,
     timer_irq_o=>,

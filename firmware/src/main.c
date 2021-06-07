@@ -66,9 +66,8 @@ void gpio_interrupt_handler(void* context) {
 }
 
 int main(void) {
-	uint8_t result = pic_init(CPU0_INST_PICTIMER_START_ADDR);
-	//result = pic_int_enable(GPIO0_INST_IRQ);
 	// Register IRQ handler for GPIO interrupts (this also enables the interrupt)
+	pic_init(CPU0_INST_PICTIMER_START_ADDR);
 	pic_isr_register(GPIO0_INST_IRQ, gpio_interrupt_handler, GPIO0);
 
 	static uint8_t idx = 0;

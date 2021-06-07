@@ -29,6 +29,12 @@
                                 <ipxact:range>0x400</ipxact:range>
                             </ipxact:segment>
                             <ipxact:segment>
+                                <ipxact:name>propel_soc_gpio1_inst_gpio_mem_map</ipxact:name>
+                                <ipxact:displayName>propel_soc/gpio1_inst/gpio_mem_map</ipxact:displayName>
+                                <ipxact:addressOffset>0x8800</ipxact:addressOffset>
+                                <ipxact:range>0x400</ipxact:range>
+                            </ipxact:segment>
+                            <ipxact:segment>
                                 <ipxact:name>propel_soc_sysmem0_inst_ahbl_slv1_model_mem_map</ipxact:name>
                                 <ipxact:displayName>propel_soc/sysmem0_inst/ahbl_slv1_model_mem_map</ipxact:displayName>
                                 <ipxact:addressOffset>0x0</ipxact:addressOffset>
@@ -155,11 +161,11 @@
                     </lattice:configurableParameter>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">IRQ_NUM</lattice:name>
-                        <lattice:value>2</lattice:value>
+                        <lattice:value>3</lattice:value>
                     </lattice:configurableParameter>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">DEVICE</lattice:name>
-                        <lattice:value>MachXO3L</lattice:value>
+                        <lattice:value>MachXO3LF</lattice:value>
                     </lattice:configurableParameter>
                     <lattice:configurableParameter>
                         <lattice:name sequence_id="0">JTAG_CHANNEL</lattice:name>
@@ -193,6 +199,36 @@
                     </lattice:configurableParameter>
                 </lattice:configurableParameters>
                 <lattice:interruptPort>IRQ_S1</lattice:interruptPort>
+                <lattice:structName>gpio_instance</lattice:structName>
+                <lattice:initName>gpio_init</lattice:initName>
+                <lattice:headerFile>gpio.h</lattice:headerFile>
+            </lattice:ipInstance>
+            <lattice:ipInstance>
+                <lattice:instanceName vendor="latticesemi.com" library="ip" name="gpio" version="1.4.0">gpio1_inst</lattice:instanceName>
+                <ipxact:memoryMaps>
+                    <ipxact:memoryMap>
+                        <ipxact:name>gpio_mem_map</ipxact:name>
+                        <ipxact:description>GPIO memory map</ipxact:description>
+                        <ipxact:addressBlock>
+                            <ipxact:name>GPIO_Registers</ipxact:name>
+                            <ipxact:baseAddress>0x8800</ipxact:baseAddress>
+                            <ipxact:range>0x400</ipxact:range>
+                            <ipxact:width>32</ipxact:width>
+                            <ipxact:vendorExtensions/>
+                        </ipxact:addressBlock>
+                    </ipxact:memoryMap>
+                </ipxact:memoryMaps>
+                <lattice:configurableParameters>
+                    <lattice:configurableParameter>
+                        <lattice:name sequence_id="1">LINES_NUM</lattice:name>
+                        <lattice:value>4</lattice:value>
+                    </lattice:configurableParameter>
+                    <lattice:configurableParameter>
+                        <lattice:name sequence_id="2">GPIO_DIRS</lattice:name>
+                        <lattice:value>0x00000000</lattice:value>
+                    </lattice:configurableParameter>
+                </lattice:configurableParameters>
+                <lattice:interruptPort>IRQ_S2</lattice:interruptPort>
                 <lattice:structName>gpio_instance</lattice:structName>
                 <lattice:initName>gpio_init</lattice:initName>
                 <lattice:headerFile>gpio.h</lattice:headerFile>

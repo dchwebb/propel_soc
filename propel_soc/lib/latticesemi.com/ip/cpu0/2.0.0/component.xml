@@ -6,6 +6,28 @@
     <ipxact:version>2.0.0</ipxact:version>
     <ipxact:busInterfaces>
         <ipxact:busInterface>
+            <ipxact:name>IRQ_S2</ipxact:name>
+            <ipxact:displayName>IRQ_S2</ipxact:displayName>
+            <ipxact:description>Interrupt Requests</ipxact:description>
+            <ipxact:busType library="busdef.interrupt" name="interrupt" vendor="spiritconsortium.org" version="1.0"/>
+            <ipxact:abstractionTypes>
+                <ipxact:abstractionType>
+                    <ipxact:abstractionRef library="busdef.interrupt" name="interrupt_rtl" vendor="spiritconsortium.org" version="1.0"/>
+                    <ipxact:portMaps>
+                        <ipxact:portMap>
+                            <ipxact:logicalPort>
+                                <ipxact:name>IRQ</ipxact:name>
+                            </ipxact:logicalPort>
+                            <ipxact:physicalPort>
+                                <ipxact:name>irq2_i</ipxact:name>
+                            </ipxact:physicalPort>
+                        </ipxact:portMap>
+                    </ipxact:portMaps>
+                </ipxact:abstractionType>
+            </ipxact:abstractionTypes>
+            <ipxact:slave/>
+        </ipxact:busInterface>
+        <ipxact:busInterface>
             <ipxact:name>IRQ_S1</ipxact:name>
             <ipxact:displayName>IRQ_S1</ipxact:displayName>
             <ipxact:description>Interrupt Requests</ipxact:description>
@@ -320,7 +342,7 @@
                         <ipxact:displayName>Interrupt_Status_Register</ipxact:displayName>
                         <ipxact:description>Interrupt Status Register</ipxact:description>
                         <ipxact:addressOffset>0</ipxact:addressOffset>
-                        <ipxact:size>2</ipxact:size>
+                        <ipxact:size>3</ipxact:size>
                         <ipxact:volatile>true</ipxact:volatile>
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:field>
@@ -328,7 +350,7 @@
                             <ipxact:displayName>status</ipxact:displayName>
                             <ipxact:description>Interrupt Status</ipxact:description>
                             <ipxact:bitOffset>0</ipxact:bitOffset>
-                            <ipxact:bitWidth>2</ipxact:bitWidth>
+                            <ipxact:bitWidth>3</ipxact:bitWidth>
                             <ipxact:volatile>true</ipxact:volatile>
                             <ipxact:access>read-write</ipxact:access>
                             <ipxact:testable testConstraint="unconstrained">false</ipxact:testable>
@@ -339,7 +361,7 @@
                         <ipxact:displayName>Interrupt_Enable_Register</ipxact:displayName>
                         <ipxact:description>Interrupt Enable Register</ipxact:description>
                         <ipxact:addressOffset>4</ipxact:addressOffset>
-                        <ipxact:size>2</ipxact:size>
+                        <ipxact:size>3</ipxact:size>
                         <ipxact:volatile>false</ipxact:volatile>
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:field>
@@ -347,7 +369,7 @@
                             <ipxact:displayName>enable</ipxact:displayName>
                             <ipxact:description>Interrupt Enable</ipxact:description>
                             <ipxact:bitOffset>0</ipxact:bitOffset>
-                            <ipxact:bitWidth>2</ipxact:bitWidth>
+                            <ipxact:bitWidth>3</ipxact:bitWidth>
                             <ipxact:volatile>false</ipxact:volatile>
                             <ipxact:access>read-write</ipxact:access>
                             <ipxact:testable testConstraint="unconstrained">true</ipxact:testable>
@@ -358,7 +380,7 @@
                         <ipxact:displayName>Interrupt_Set_Register</ipxact:displayName>
                         <ipxact:description>Interrupt Set Register</ipxact:description>
                         <ipxact:addressOffset>8</ipxact:addressOffset>
-                        <ipxact:size>2</ipxact:size>
+                        <ipxact:size>3</ipxact:size>
                         <ipxact:volatile>false</ipxact:volatile>
                         <ipxact:access>write-only</ipxact:access>
                         <ipxact:field>
@@ -366,7 +388,7 @@
                             <ipxact:displayName>set</ipxact:displayName>
                             <ipxact:description>Interrupt Set</ipxact:description>
                             <ipxact:bitOffset>0</ipxact:bitOffset>
-                            <ipxact:bitWidth>2</ipxact:bitWidth>
+                            <ipxact:bitWidth>3</ipxact:bitWidth>
                             <ipxact:volatile>false</ipxact:volatile>
                             <ipxact:access>write-only</ipxact:access>
                             <ipxact:testable testConstraint="unconstrained">false</ipxact:testable>
@@ -377,7 +399,7 @@
                         <ipxact:displayName>Interrupt_Polarity_Register</ipxact:displayName>
                         <ipxact:description>Interrupt Polarity Register</ipxact:description>
                         <ipxact:addressOffset>12</ipxact:addressOffset>
-                        <ipxact:size>2</ipxact:size>
+                        <ipxact:size>3</ipxact:size>
                         <ipxact:volatile>false</ipxact:volatile>
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:field>
@@ -385,7 +407,7 @@
                             <ipxact:displayName>pol</ipxact:displayName>
                             <ipxact:description>Interrupt Polarity</ipxact:description>
                             <ipxact:bitOffset>0</ipxact:bitOffset>
-                            <ipxact:bitWidth>2</ipxact:bitWidth>
+                            <ipxact:bitWidth>3</ipxact:bitWidth>
                             <ipxact:volatile>false</ipxact:volatile>
                             <ipxact:access>read-write</ipxact:access>
                             <ipxact:testable testConstraint="unconstrained">true</ipxact:testable>
@@ -566,6 +588,19 @@
                 <ipxact:vendorExtensions>
                     <lsccip:isRst>true</lsccip:isRst>
                 </ipxact:vendorExtensions>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>irq2_i</ipxact:name>
+                <ipxact:displayName>irq2_i</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                    <ipxact:vectors>
+                        <ipxact:vector>
+                            <ipxact:left>0</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:vector>
+                    </ipxact:vectors>
+                </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
                 <ipxact:name>irq1_i</ipxact:name>
@@ -998,16 +1033,17 @@
     </ipxact:fileSets>
     <ipxact:vendorExtensions>
         <lsccip:moduleRef lsccip:library="ip" lsccip:name="riscv_mc" lsccip:type="cpu" lsccip:vendor="latticesemi.com" lsccip:version="2.0.0"/>
+        <lsccip:instantiatedOnce>true</lsccip:instantiatedOnce>
         <lsccip:deviceInfo>
-            <lsccip:architecture>MachXO3L</lsccip:architecture>
-            <lsccip:device>LCMXO3L-1300C</lsccip:device>
+            <lsccip:architecture>MachXO3LF</lsccip:architecture>
+            <lsccip:device>LCMXO3LF-6900C</lsccip:device>
             <lsccip:package>CABGA256</lsccip:package>
             <lsccip:performanceGrade>6</lsccip:performanceGrade>
         </lsccip:deviceInfo>
         <lsccip:generationInfo>
             <lsccip:fileVersion>20180929</lsccip:fileVersion>
-            <lsccip:createdTimestamp>2021 04 15 11:05:57</lsccip:createdTimestamp>
-            <lsccip:radiantBuild>&quot;Lattice Propel&quot; (64-bit) 2.0.2104141215</lsccip:radiantBuild>
+            <lsccip:createdTimestamp>2021 06 07 16:46:57</lsccip:createdTimestamp>
+            <lsccip:radiantBuild>&quot;Lattice Propel&quot; (64-bit) 2.0.2104292220</lsccip:radiantBuild>
         </lsccip:generationInfo>
     </ipxact:vendorExtensions>
 </ipxact:component>

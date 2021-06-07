@@ -22,8 +22,8 @@
                     <ipxact:configurableElementValue referenceId="PIC_ENABLE">True</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="TIMER_ENABLE">True</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="PICTIMER_START_ADDR">32'hFFFF0000</ipxact:configurableElementValue>
-                    <ipxact:configurableElementValue referenceId="IRQ_NUM">2</ipxact:configurableElementValue>
-                    <ipxact:configurableElementValue referenceId="DEVICE">MachXO3L</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="IRQ_NUM">3</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DEVICE">MachXO3LF</ipxact:configurableElementValue>
                     <ipxact:configurableElementValue referenceId="JTAG_CHANNEL">14</ipxact:configurableElementValue>
                 </ipxact:configurableElementValues>
             </ipxact:componentRef>
@@ -123,7 +123,6 @@
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
             <ipxact:name>cpu0.IRQ.2:2</ipxact:name>
-            <ipxact:tiedValue>open</ipxact:tiedValue>
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="cpu0" portRef="IRQ">
                     <ipxact:partSelect>
@@ -133,6 +132,14 @@
                         </ipxact:range>
                     </ipxact:partSelect>
                 </ipxact:internalPortReference>
+                <ipxact:externalPortReference portRef="irq2_i">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>0</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>

@@ -13,7 +13,7 @@ Hostname: DESKTOP-F9DG68B
 
 Implementation : impl1
 
-# Written on Sat Jun  5 14:30:53 2021
+# Written on Mon Jun  7 17:15:15 2021
 
 ##### DESIGN INFO #######################################################
 
@@ -35,21 +35,21 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting                                                                 Ending                                                                   |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                                   System                                                                   |     10.000           |     No paths         |     No paths         |     No paths                         
-System                                                                   HelloWorld_Top|sys_clk                                                   |     26.316           |     No paths         |     No paths         |     26.316                           
-System                                                                   cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     |     10.000           |     No paths         |     10.000           |     No paths                         
-HelloWorld_Top|sys_clk                                                   System                                                                   |     26.316           |     No paths         |     26.316           |     No paths                         
-HelloWorld_Top|sys_clk                                                   HelloWorld_Top|sys_clk                                                   |     26.316           |     No paths         |     No paths         |     No paths                         
-HelloWorld_Top|sys_clk                                                   cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            |     Diff grp         |     No paths         |     No paths         |     No paths                         
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            System                                                                   |     No paths         |     No paths         |     No paths         |     10.000                           
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            HelloWorld_Top|sys_clk                                                   |     Diff grp         |     No paths         |     No paths         |     No paths                         
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            |     10.000           |     No paths         |     5.000            |     No paths                         
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     System                                                                   |     10.000           |     No paths         |     No paths         |     No paths                         
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|TCK_inferred_clock            |     No paths         |     No paths         |     No paths         |     Diff grp                         
-cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     |     10.000           |     10.000           |     5.000            |     5.000                            
-=============================================================================================================================================================================================================================================================
+Starting                                                                  Ending                                                                    |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                    System                                                                    |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                                    HelloWorld_Top|sys_clk                                                    |     26.316           |     No paths         |     No paths         |     26.316                           
+System                                                                    cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|bscan_DRCK_inferred_clock     |     10.000           |     No paths         |     10.000           |     No paths                         
+HelloWorld_Top|sys_clk                                                    System                                                                    |     26.316           |     No paths         |     26.316           |     No paths                         
+HelloWorld_Top|sys_clk                                                    HelloWorld_Top|sys_clk                                                    |     26.316           |     No paths         |     No paths         |     No paths                         
+HelloWorld_Top|sys_clk                                                    cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            System                                                                    |     No paths         |     No paths         |     No paths         |     10.000                           
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            HelloWorld_Top|sys_clk                                                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            |     10.000           |     No paths         |     5.000            |     No paths                         
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|bscan_DRCK_inferred_clock     System                                                                    |     10.000           |     No paths         |     No paths         |     No paths                         
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|bscan_DRCK_inferred_clock     cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|TCK_inferred_clock            |     No paths         |     No paths         |     No paths         |     Diff grp                         
+cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|bscan_DRCK_inferred_clock     cpu0_ipgen_vex_jtag_bridge_0s_MachXO3LF_14s|bscan_DRCK_inferred_clock     |     10.000           |     10.000           |     5.000            |     5.000                            
+===============================================================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -57,6 +57,14 @@ cpu0_ipgen_vex_jtag_bridge_0s_MachXO3L_14s|bscan_DRCK_inferred_clock     cpu0_ip
 Unconstrained Start/End Points
 ******************************
 
+p:gpio1_io[0] (bidir end point)
+p:gpio1_io[0] (bidir start point)
+p:gpio1_io[1] (bidir end point)
+p:gpio1_io[1] (bidir start point)
+p:gpio1_io[2] (bidir end point)
+p:gpio1_io[2] (bidir start point)
+p:gpio1_io[3] (bidir end point)
+p:gpio1_io[3] (bidir start point)
 p:led_o[0] (bidir end point)
 p:led_o[0] (bidir start point)
 p:led_o[1] (bidir end point)

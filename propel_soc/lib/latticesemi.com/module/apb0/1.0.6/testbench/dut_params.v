@@ -1,10 +1,10 @@
 localparam TOTAL_MASTER_CNT = 1;
-localparam TOTAL_SLAVE_CNT = 2;
+localparam TOTAL_SLAVE_CNT = 3;
 localparam M_ADDR_WIDTH = 32;
 localparam FULL_DECODE_EN = 1;
 localparam DATA_WIDTH = 32;
 localparam OUTREG_EN = 0;
-localparam FAMILY = "MachXO3L";
+localparam FAMILY = "MachXO3LF";
 localparam S0_BASE_ADDR = 32'h00000000;
 localparam S0_ADDR_RANGE = 32'h00000400;
 localparam S1_BASE_ADDR = 32'h00000400;
@@ -71,4 +71,6 @@ localparam S31_BASE_ADDR = 32'h00007c00;
 localparam S31_ADDR_RANGE = 32'h00000400;
 localparam S_ARBITER_SCHEME = 3'd0;
 localparam S_M_PRIO_IDX = 1'd1;
-`define MACHXO3L
+`define MachXO3LF
+`define xo3c00f
+`define LCMXO3LF-6900C

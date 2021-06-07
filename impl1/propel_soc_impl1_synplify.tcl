@@ -62,4 +62,4 @@ project -log_file {propel_soc_impl1.srf}
 
 
 #-- run Synplify with 'arrange HDL file'
-project -run -clean
+project -run

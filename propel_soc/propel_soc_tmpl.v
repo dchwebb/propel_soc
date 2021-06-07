@@ -41,8 +41,9 @@
 
 //Verilog instantiation template
 
-propel_soc _inst (.clk_i(), 
+propel_soc _inst (.rxd_i(), 
+                  .txd_o(), 
                   .rstn_i(), 
                   .gpio_io(), 
-                  .rxd_i(), 
-                  .txd_o());
+                  .clk_i(), 
+                  .gpio1_io());

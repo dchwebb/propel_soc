@@ -23,23 +23,23 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO3LF-6900CCABGA256
 Target Performance:   6
 Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  06/06/21  17:04:08
+Mapped on:  06/07/21  17:29:24
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:   1737 out of  7485 (23%)
-      PFU registers:         1728 out of  6864 (25%)
-      PIO registers:            9 out of   621 (1%)
-   Number of SLICEs:      1654 out of  3432 (48%)
-      SLICEs as Logic/ROM:   1648 out of  3432 (48%)
+   Number of registers:   1804 out of  7485 (24%)
+      PFU registers:         1791 out of  6864 (26%)
+      PIO registers:           13 out of   621 (2%)
+   Number of SLICEs:      1696 out of  3432 (49%)
+      SLICEs as Logic/ROM:   1690 out of  3432 (49%)
       SLICEs as RAM:            6 out of  2574 (0%)
       SLICEs as Carry:        190 out of  3432 (6%)
-   Number of LUT4s:        3280 out of  6864 (48%)
-      Number used as logic LUTs:        2888
+   Number of LUT4s:        3364 out of  6864 (49%)
+      Number used as logic LUTs:        2972
       Number used as distributed RAM:    12
       Number used as ripple logic:      380
       Number used as shift registers:     0
-   Number of PIO sites used: 11 + 4(JTAG) out of 207 (7%)
+   Number of PIO sites used: 15 + 4(JTAG) out of 207 (9%)
    Number of block RAMs:  20 out of 26 (77%)
    Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
@@ -64,124 +64,139 @@ Mapped on:  06/06/21  17:04:08
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  4
-     Net sys_clk: 984 loads, 984 rising, 0 falling (Driver: OSCH_inst )
-     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi
+   Number of clocks:  5
+     Net sys_clk: 1018 loads, 1018 rising, 0 falling (Driver: OSCH_inst )
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/lmmi_rdata_valid_w: 2 loads,
 
-     _rdata_valid_w: 6 loads, 6 rising, 0 falling (Driver: HelloWorld_inst/gpio0
-     _inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi_rdata_valid_o_0_a2 )
+     2 rising, 0 falling (Driver: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genb
+     lk2.lscc_apb2lmmi_0/un1_apb_pready_nxt_2_sqmuxa_1_i_a2_i_0_a2_0 )
+     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/lmmi_rdata_valid_w: 4 loads,
+     4 rising, 0 falling (Driver: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genb
+     lk2.lscc_apb2lmmi_0/un1_apb_pready_nxt_2_sqmuxa_1_i_a2_i_0_a2_0 )
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK: 44
      loads, 43 rising, 1 falling (Driver: HelloWorld_inst/cpu0_inst/riscvsmall_i
      nst/genblk7.vex_debug/vex_jtag_bridge_i/genblk2.TCK_buff )
      Net jtaghub16_jtck: 36 loads, 4 rising, 32 falling (Driver:
      xo2chub/genblk7.jtagf_u )
-   Number of Clock Enables:  111
-     Net
-     HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state_RNI52785[1]: 5
-     loads, 5 LSLICEs
+   Number of Clock Enables:  120
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state[0]: 10
      loads, 10 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/N_78_i: 5 loads, 5
+     LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/un1_thr_wr_1: 1
      loads, 1 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/un1_tsr_empty5: 1
      loads, 1 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_rbr_rd_1: 1
      loads, 1 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_lsr_rd: 4 loads,
-     4 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/hunt_one_RNO_0: 1
+     loads, 1 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/rx_frame_err_RNO: 1
+     loads, 1 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_cs_state_3_i: 1
      loads, 1 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_databit_recved_n
-     um_1_sqmuxa_0: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/databit_recved_nume:
      6 loads, 6 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_hunt_1: 1 loads,
-     1 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_cs_state_0_sqmux
      a_2_i: 1 loads, 1 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_377_1_i: 7 loads,
-     7 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/data_8bit23: 6
-     loads, 6 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/lcr_1_sqmuxa: 4
-     loads, 4 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/un1_lsr_rd: 4 loads,
+     4 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/rbr21: 6 loads, 6
+     LSLICEs
      Net
      HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/thr_nonfifo_0_sqmuxa: 4
      loads, 4 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/lcr_1_sqmuxa: 4
+     loads, 4 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/ier_1_sqmuxa: 2
      loads, 2 LSLICEs
-     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/divisorce[0]: 5
-     loads, 5 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/data_8bit23: 6
+     loads, 6 LSLICEs
+     Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/divisorce[0]: 4
+     loads, 4 LSLICEs
      Net HelloWorld_inst/uart0_inst/lscc_uart_inst/u_intface/divisorce[8]: 4
      loads, 4 LSLICEs
+     Net HelloWorld_inst/ahbl2apb0_inst_APB_M0_interconnect_PSELx_interconnect:
+     2 loads, 2 LSLICEs
      Net HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w: 33
      loads, 1 LSLICEs
-     Net
-     HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/un3_mem_request_o_i_a3_i: 34
-     loads, 2 LSLICEs
+     Net HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/N_222_i: 34 loads, 2
+     LSLICEs
      Net HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram
      _dp_true_be.u_mem/wren1_inv_g: 2 loads, 2 LSLICEs
+
      Net HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HREADY_interconnect: 1
      loads, 1 LSLICEs
-     Net HelloWorld_inst/ahbl_hsel_dec_r_0_sqmuxa: 2 loads, 2 LSLICEs
-
      Net HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT_intercon
      nect: 1 loads, 1 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_s
+     m_cs[1]: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/apb_p
+     slverr_nxt_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/apb_p
+     ready_o_RNO_0: 1 loads, 1 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_s
+     m_ns_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi
+     _rdata_r_9_i_a2_5_0_a2_RNIK65B1[3]: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/dire
+     ction_r_1_sqmuxa: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
+     type_r_1_sqmuxa: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
+     method_r_1_sqmuxa: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
+     enable_r_1_sqmuxa: 2 loads, 2 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_s
      m_cs[1]: 2 loads, 2 LSLICEs
-     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_s
-     m_ns_0_sqmuxa: 6 loads, 6 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/apb_p
      slverr_nxt_0_sqmuxa: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/apb_p
      ready_o_RNO: 1 loads, 1 LSLICEs
+     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_s
+     m_ns_0_sqmuxa: 6 loads, 6 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/dire
      ction_r_1_sqmuxa: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
-     type_r_1_sqmuxa: 4 loads, 4 LSLICEs
-     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
      method_r_1_sqmuxa: 4 loads, 4 LSLICEs
+     Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
+     type_r_1_sqmuxa: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/int_
      enable_r_1_sqmuxa: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/un1_
-     gpio_out_r21_i: 4 loads, 4 LSLICEs
-     Net HelloWorld_inst/ahbl2apb0_inst_APB_M0_interconnect_PSELx_interconnect:
-     1 loads, 1 LSLICEs
+     gpio_out_r21_i_a2: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_ahbl_hrdata_o_0_s
-     qmuxa_0: 4 loads, 4 LSLICEs
-     Net HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w: 14
-     loads, 14 LSLICEs
+     qmuxa_0_0: 4 loads, 4 LSLICEs
+     Net HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_apb_pslverr_i_1_0
+     _a2_0_a2_RNIUUL51: 4 loads, 4 LSLICEs
+     Net HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_67_i: 15 loads, 15
+     LSLICEs
      Net HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0:
-     13 loads, 13 LSLICEs
-     Net
-     HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0_0: 4
-     loads, 4 LSLICEs
+     14 loads, 14 LSLICEs
+     Net HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_l
+     scc_ahbl_bus/u_lscc_ahbl_multiplexor/ahbl_hsel_dec_r_0_sqmuxa: 2 loads, 2
+     LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/lastSt
      ageRegFileWrite_valid: 4 loads, 0 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un1_Cs
      rPlugin_interrupt_valid16_i: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
+
      gin_exceptionPortCtrl_exceptionContext_code_3_sqmuxa_i: 18 loads, 18
      LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
      mplePlugin_rspJoin_rspBuffer_c/pushing: 32 loads, 32 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un1_IB
      usSimplePlugin_externalFlush_99_i: 1 loads, 1 LSLICEs
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_202:
-     1 loads, 1 LSLICEs
-     Net
-     HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_188_:
-     8 loads, 8 LSLICEs
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_83
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_55
      __1_sqmuxa_i: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un1_IB
      usSimplePlugin_externalFlush_i: 1 loads, 1 LSLICEs
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_55
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_83
      __1_sqmuxa_i: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/DebugP
      lugin_busReadDataReg_1_sqmuxa_i: 17 loads, 17 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execut
-
      e_LightShifterPlugin_amplitudeReg_0_sqmuxa: 3 loads, 3 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/DebugP
      lugin_haltedByBreak_1_sqmuxa_i: 1 loads, 1 LSLICEs
@@ -190,6 +205,8 @@ Mapped on:  06/06/21  17:04:08
      3 loads, 3 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
      gin_mstatus_MIE_2_sqmuxa_i: 3 loads, 3 LSLICEs
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
+     mplePlugin_fetchPc_inc4: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/memory
      _arbitration_haltItself4_i: 43 loads, 43 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execut
@@ -206,18 +223,22 @@ Mapped on:  06/06/21  17:04:08
      e_LightShifterPlugin_isActive_1_sqmuxa_i: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/b_dbus_if_pic_HREADY: 18
      loads, 18 LSLICEs
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_202:
+     1 loads, 1 LSLICEs
      Net
      HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_60_i: 16
      loads, 16 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
      mplePlugin_fetchPc_pcReg4: 8 loads, 8 LSLICEs
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
-     mplePlugin_fetchPc_inc4: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_94:
      1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
      mplePlugin_decompressor_bufferValid_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net
+     HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_188_:
+     8 loads, 8 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSi
+
      mplePlugin_cmd_s2mPipe_rValid_1_sqmuxa_i: 1 loads, 1 LSLICEs
      Net
      HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_189_:
@@ -238,7 +259,6 @@ Mapped on:  06/06/21  17:04:08
      gin_hadException: 16 loads, 16 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
      gin_mscratch_0_sqmuxa: 16 loads, 16 LSLICEs
-
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
      gin_mie_MEIE_0_sqmuxa: 3 loads, 3 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
@@ -248,7 +268,7 @@ Mapped on:  06/06/21  17:04:08
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebug
      ger_1_/N_13: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebug
-     ger_1_/N_228_i: 4 loads, 4 LSLICEs
+     ger_1_/N_238_i: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebug
      ger_1_/N_11: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebug
@@ -275,6 +295,7 @@ Mapped on:  06/06/21  17:04:08
      idge_i/TDI_reg_WE0: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_br
      idge_i/shift_enable_wire: 2 loads, 2 LSLICEs
+
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_i
      nt_reg12_i: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_r
@@ -295,27 +316,28 @@ Mapped on:  06/06/21  17:04:08
      egce[48]: 4 loads, 4 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cmp_r
      egce[56]: 4 loads, 4 LSLICEs
-
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_pic.i_pic/pic_status_r
-     eg_2_sqmuxa_i: 1 loads, 1 LSLICEs
+     eg_2_sqmuxa_i: 2 loads, 2 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_pic.i_pic/pic_polarity
-     _reg_0_sqmuxa: 1 loads, 1 LSLICEs
+     _reg_0_sqmuxa: 2 loads, 2 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_pic.i_pic/pic_enable_r
-     eg_0_sqmuxa: 1 loads, 1 LSLICEs
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/N_1
-     78_i: 3 loads, 3 LSLICEs
+     eg_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/N_2
+     6_i: 3 loads, 3 LSLICEs
      Net jtaghub16_jupdate: 8 loads, 8 LSLICEs
      Net xo2chub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
      Net xo2chub/er1_shift_reg8: 10 loads, 10 LSLICEs
    Number of local set/reset loads for net rstn_i_c merged into GSR:  1
-   Number of LSRs:  11
-     Net HelloWorld_inst/cpu0_inst_system_resetn_o_net: 318 loads, 277 LSLICEs
+   Number of LSRs:  12
+     Net HelloWorld_inst/cpu0_inst_system_resetn_o_net: 351 loads, 306 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlu
      gin_interrupt_code_0_sqmuxa: 1 loads, 1 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/resetCtrl_systemReset: 134
      loads, 134 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/fb: 1
      loads, 1 LSLICEs
+     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/s0_hrdata_o_sn_N_2: 4 loads,
+     4 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/resetCtrl_mainClkReset: 13
      loads, 13 LSLICEs
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/DebugP
@@ -330,8 +352,9 @@ Mapped on:  06/06/21  17:04:08
      1_/fb: 1 loads, 1 LSLICEs
      Net jtaghub16_jrstn: 34 loads, 34 LSLICEs
    Number of nets driven by tri-state buffers:  0
+
    Top 10 highest fanout non-clock nets:
-     Net HelloWorld_inst/cpu0_inst_system_resetn_o_net: 343 loads
+     Net HelloWorld_inst/cpu0_inst_system_resetn_o_net: 377 loads
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/resetCtrl_systemReset: 134
      loads
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execut
@@ -339,19 +362,18 @@ Mapped on:  06/06/21  17:04:08
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode
      _to_execute_SRC1_CTRL[1]: 90 loads
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_31
-     __6_sqmuxa: 73 loads
+     __6_sqmuxa: 72 loads
      Net HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HSIZE_interconnect[1]:
-     70 loads
-     Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/pic_enable_reg5: 70 loads
+     71 loads
+     Net HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HSIZE_interconnect[0]:
+     66 loads
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execut
      e_CsrPlugin_csr_833: 66 loads
-     Net HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HSIZE_interconnect[0]:
-     65 loads
      Net HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode
      _to_execute_SRC2_CTRL[1]: 65 loads
-
-
-
+     Net
+     HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_reg:
+     65 loads
 
 
 
@@ -379,9 +401,18 @@ Mapped on:  06/06/21  17:04:08
 +---------------------+-----------+-----------+------------+
 | rstn_i              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| gpio1_io[0]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| gpio1_io[3]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| gpio1_io[2]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| gpio1_io[1]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
 | led_o[5]            | BIDIR     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | led_o[0]            | BIDIR     | LVCMOS33  | IN         |
+
 +---------------------+-----------+-----------+------------+
 | led_o[3]            | BIDIR     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -415,7 +446,6 @@ Block HelloWorld_inst/cpu0_inst/VCC_0 undriven or does not drive anything -
 Block HelloWorld_inst/cpu0_inst/GND_0 undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/VCC_0
-
      undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/GND_0
      undriven or does not drive anything - clipped.
@@ -423,6 +453,8 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_pic.i_pic/GND_0 undriven
      or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_pic.i_pic/VCC_0 undriven
      or does not drive anything - clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/VCC_0
+     undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/GND_0 undriven
      or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/VCC_0 undriven
@@ -438,6 +470,7 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
      e_i/TDI_reg2/VCC_0 undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
+
      e_i/TDI_reg2/GND_0 undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
      e_i/TDI_reg/VCC_0 undriven or does not drive anything - clipped.
@@ -472,7 +505,6 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBridge_1_/
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger
      _1_/VCC_0 undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger
-
      _1_/dispatcher_dataShifter_CR0_ram_0/RAM1 undriven or does not drive
      anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger
@@ -495,6 +527,7 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7_cry_23_0 undriven or does not drive anything -
+
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7_cry_25_0 undriven or does not drive anything -
@@ -505,12 +538,6 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7_s_29_0 undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[30] undriven or does not drive anything -
-     clipped.
-Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[23] undriven or does not drive anything -
-     clipped.
-Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[27] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
@@ -520,16 +547,12 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[15] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[16] undriven or does not drive anything -
-     clipped.
-Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[17] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[18] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-
      ePlugin_cmd_s2mPipe_payload_pc[19] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
@@ -537,12 +560,6 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[21] undriven or does not drive anything -
-     clipped.
-Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[22] undriven or does not drive anything -
-     clipped.
-Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[24] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[25] undriven or does not drive anything -
@@ -554,10 +571,26 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[28] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+     ePlugin_cmd_s2mPipe_payload_pc[29] undriven or does not drive anything -
+     clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+     ePlugin_cmd_s2mPipe_payload_pc[16] undriven or does not drive anything -
+     clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_payload_pc[31] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-     ePlugin_cmd_s2mPipe_payload_pc[29] undriven or does not drive anything -
+     ePlugin_cmd_s2mPipe_payload_pc[24] undriven or does not drive anything -
+     clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+     ePlugin_cmd_s2mPipe_payload_pc[22] undriven or does not drive anything -
+
+     clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+     ePlugin_cmd_s2mPipe_payload_pc[23] undriven or does not drive anything -
+     clipped.
+Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+     ePlugin_cmd_s2mPipe_payload_pc[30] undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7[30] undriven or does not drive anything - clipped.
@@ -586,7 +619,6 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7[18] undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
-
      ePlugin_fetchPc_pc_7[17] undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pc_7[16] undriven or does not drive anything - clipped.
@@ -609,6 +641,7 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_rData_pc[26] undriven or does not drive anything -
+
      clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_rData_pc[25] undriven or does not drive anything -
@@ -643,7 +676,6 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_rData_pc[15] undriven or does not drive anything -
      clipped.
-
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_cmd_s2mPipe_rData_pc[14] undriven or does not drive anything -
      clipped.
@@ -666,6 +698,7 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pcReg[23] undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
+
      ePlugin_fetchPc_pcReg[22] undriven or does not drive anything - clipped.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimpl
      ePlugin_fetchPc_pcReg[21] undriven or does not drive anything - clipped.
@@ -700,10 +733,6 @@ Block HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc
      clipped.
 Block HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc
      _ahbl_bus/u_lscc_ahbl_multiplexor/GND undriven or does not drive anything -
-
-     clipped.
-Block HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc
-     _ahbl_bus/u_lscc_ahbl_default_slv/GND undriven or does not drive anything -
      clipped.
 Block HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc
      _ahbl_bus/u_lscc_ahbl_default_slv/VCC undriven or does not drive anything -
@@ -713,14 +742,7 @@ Block HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/VCC undriven or does not
 Block HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/GND undriven or does not
      drive anything - clipped.
 Block HelloWorld_inst/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bu
-     s/u_lscc_apb_decoder/genblk1[0].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_ap
-     b_decoder_comp/GND undriven or does not drive anything - clipped.
-Block HelloWorld_inst/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bu
-     s/u_lscc_apb_decoder/genblk1[1].u_lscc_apb_decoder_sel/genblk1[0].u_lscc_ap
-     b_decoder_comp/GND undriven or does not drive anything - clipped.
-Block HelloWorld_inst/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bu
-     s/u_lscc_apb_multiplexor/GND undriven or does not drive anything - clipped.
-     
+     s/u_lscc_apb_decoder/GND undriven or does not drive anything - clipped.
 Block HelloWorld_inst/apb0_inst/lscc_apb_interconnect_inst/apb_bus.u_lscc_apb_bu
      s/u_lscc_apb_multiplexor/VCC undriven or does not drive anything - clipped.
      
@@ -729,6 +751,13 @@ Block HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/GND
 Block HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/VCC
      undriven or does not drive anything - clipped.
 Block HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/GND
+     undriven or does not drive anything - clipped.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/GND
+     undriven or does not drive anything - clipped.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/VCC
+
+     undriven or does not drive anything - clipped.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/GND
      undriven or does not drive anything - clipped.
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/bridge_s0.bridge_s0/GND
      undriven or does not drive anything - clipped.
@@ -757,7 +786,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_brid
      ge_i/TCK_counter_reg/RST_i was merged into signal jtaghub16_jrstn
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_brid
      ge_i/TDI_reg2/RST_i was merged into signal jtaghub16_jrstn
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_brid
      ge_i/TDI_reg/RST_i was merged into signal jtaghub16_jrstn
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_brid
@@ -784,6 +812,7 @@ Signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
      ion_r_i[6] was merged into signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst
      /genblk1.lscc_gpio_lmmi_0/direction_r[6]
 Signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
+
      ion_r_i[5] was merged into signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst
      /genblk1.lscc_gpio_lmmi_0/direction_r[5]
 Signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
@@ -804,9 +833,24 @@ Signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
 Signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_
      cs_i[1] was merged into signal HelloWorld_inst/gpio0_inst/lscc_gpio_inst/ge
      nblk2.lscc_apb2lmmi_0/bus_sm_cs[1]
+Signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
+     ion_r_i[3] was merged into signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst
+     /genblk1.lscc_gpio_lmmi_0/direction_r[3]
+Signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
+     ion_r_i[2] was merged into signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst
+     /genblk1.lscc_gpio_lmmi_0/direction_r[2]
+Signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
+     ion_r_i[1] was merged into signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst
+     /genblk1.lscc_gpio_lmmi_0/direction_r[1]
+Signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direct
+     ion_r_i[0] was merged into signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst
+     /genblk1.lscc_gpio_lmmi_0/direction_r[0]
+Signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_
+     cs_i[1] was merged into signal HelloWorld_inst/gpio1_inst/lscc_gpio_inst/ge
+     nblk2.lscc_apb2lmmi_0/bus_sm_cs[1]
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/wren0_inv_g was merged into signal
-     HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/un3_mem_request_o_i_a3_i
+     HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/N_222_i
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/wren1_inv was merged into signal
      HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b
@@ -814,7 +858,6 @@ Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state_i[0] was
      merged into signal
      HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state[0]
 Signal xo2chub/GND undriven or does not drive anything - clipped.
-
 Signal GND undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/GND
      undriven or does not drive anything - clipped.
@@ -826,6 +869,7 @@ Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/GND undriven
      or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/wren0_inv undriven or does not drive anything - clipped.
+
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/scuba_vlo undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/GND undriven or does
@@ -871,7 +915,6 @@ Signal xo2chub/jtdo2_int_prm_9_0_0_S1 undriven or does not drive anything -
      clipped.
 Signal xo2chub/jtdo2_int_prm_9_0_0_S0 undriven or does not drive anything -
      clipped.
-
 Signal xo2chub/er2_tdo[6] undriven or does not drive anything - clipped.
 Signal xo2chub/er2_tdo[7] undriven or does not drive anything - clipped.
 Signal xo2chub/jtdo2_int_prm_7_0_0_S1 undriven or does not drive anything -
@@ -883,6 +926,7 @@ Signal xo2chub/er2_tdo[5] undriven or does not drive anything - clipped.
 Signal xo2chub/jtdo2_int_prm_5_0_0_S1 undriven or does not drive anything -
      clipped.
 Signal xo2chub/jtdo2_int_prm_5_0_0_S0 undriven or does not drive anything -
+
      clipped.
 Signal xo2chub/er2_tdo[2] undriven or does not drive anything - clipped.
 Signal xo2chub/er2_tdo[3] undriven or does not drive anything - clipped.
@@ -922,13 +966,12 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_0_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_0_0_S0 undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_16
+Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_2
      undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_1_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_1_0_S0 undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_3_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
@@ -940,6 +983,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_7_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
+
      _reg_2_cry_7_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_9_0_S1 undriven or does not drive anything - clipped.
@@ -985,7 +1029,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_29_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_29_0_S0 undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_31_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
@@ -997,6 +1040,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_35_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
+
      _reg_2_cry_35_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_37_0_S1 undriven or does not drive anything - clipped.
@@ -1042,7 +1086,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_57_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_57_0_S0 undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_59_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
@@ -1054,10 +1097,11 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
      _reg_2_cry_63_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt
+
      _reg_2_cry_63_0_COUT undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_reg
      _cry_0_S0[0] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_15
+Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_1
      undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugge
      r_1_/dispatcher_dataShifter_CR0_ram_0_DO2 undriven or does not drive
@@ -1099,7 +1143,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/RegFileP
      lugin_regFile_RegFilePlugin_regFile_0_1_DO6 undriven or does not drive
      anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/RegFileP
-
      lugin_regFile_RegFilePlugin_regFile_0_1_DO5 undriven or does not drive
      anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
@@ -1111,6 +1154,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_1
      undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
+
      lePlugin_decodePc_pcReg_5_cry_30_0_COUT undriven or does not drive anything
      - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbL
@@ -1156,7 +1200,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7_s_29_0_COUT undriven or does not drive anything -
      clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7_cry_28 undriven or does not drive anything - clipped.
      
@@ -1168,6 +1211,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_9
      undriven or does not drive anything - clipped.
+
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_branchAdder_s_31_0_S1 undriven or does not drive anything -
      clipped.
@@ -1213,7 +1257,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un7_deco
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un7_deco
      de_DO_EBREAK_0_I_93_0_COUT undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
-
      de_DO_EBREAK_0_I_1_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
      de_DO_EBREAK_0_I_1_0_S0 undriven or does not drive anything - clipped.
@@ -1225,6 +1268,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
      de_DO_EBREAK_0_I_9_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
      de_DO_EBREAK_0_I_21_0_S1 undriven or does not drive anything - clipped.
+
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
      de_DO_EBREAK_0_I_21_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/un5_deco
@@ -1270,7 +1314,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_33_0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
-
      BranchPlugin_eq_0_I_27_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_27_0_S0 undriven or does not drive anything - clipped.
@@ -1282,6 +1325,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_21_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_21_0_S0 undriven or does not drive anything - clipped.
+
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_81_0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
@@ -1291,18 +1335,12 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_
      BranchPlugin_eq_0_I_45_0_COUT undriven or does not drive anything -
      clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[3
-     0] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     3] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
      7] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
      4] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
      5] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
-     6] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
      7] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
@@ -1313,21 +1351,26 @@ Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
      0] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
      1] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
+     5] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
+     6] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
+     8] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
+     9] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[1
+     6] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[3
+     1] undriven or does not drive anything - clipped.
+Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
+     4] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
      2] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     4] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     5] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     6] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     8] undriven or does not drive anything - clipped.
+     3] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[3
-     1] undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[2
-     9] undriven or does not drive anything - clipped.
-
+     0] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7_axb_28 undriven or does not drive anything - clipped.
      
@@ -1339,6 +1382,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7_axb_25 undriven or does not drive anything - clipped.
+
      
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7_axb_24 undriven or does not drive anything - clipped.
@@ -1384,7 +1428,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_cmd_s2mPipe_rData_pc[29] undriven or does not drive anything -
-
      clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_cmd_s2mPipe_rData_pc[28] undriven or does not drive anything -
@@ -1396,6 +1439,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_cmd_s2mPipe_rData_pc[26] undriven or does not drive anything -
      clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
+
      lePlugin_cmd_s2mPipe_rData_pc[25] undriven or does not drive anything -
      clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
@@ -1441,7 +1485,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[30] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pcReg[29] undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[29] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
@@ -1453,6 +1496,7 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[27] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
+
      lePlugin_fetchPc_pcReg[26] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[26] undriven or does not drive anything - clipped.
@@ -1498,7 +1542,6 @@ Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[16] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pcReg[15] undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimp
      lePlugin_fetchPc_pc_7[15] undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
@@ -1510,6 +1553,7 @@ Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout1_3_17 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
+
      p_true_be.u_mem/mdout0_3_17 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout1_3_8 undriven or does not drive anything - clipped.
@@ -1555,7 +1599,6 @@ Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout1_0_26 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout0_0_26 undriven or does not drive anything - clipped.
-
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout1_0_17 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
@@ -1567,6 +1610,7 @@ Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
      p_true_be.u_mem/mdout1_3_35 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_d
+
      p_true_be.u_mem/mdout0_3_35 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_cry_0_S0[0]
      undriven or does not drive anything - clipped.
@@ -1576,8 +1620,8 @@ Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_s_0_S1[15]
      undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_s_0_COUT[15]
      undriven or does not drive anything - clipped.
-Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_425_i undriven or
-     does not drive anything - clipped.
+Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_eq_div_2_0_I_1
+     _0_S1 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_eq_div_2_0_I_1
      _0_S0 undriven or does not drive anything - clipped.
 Signal HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_7 undriven or does
@@ -1612,7 +1656,6 @@ Block xo2chub/ip_enable_0_.CN was optimized away.
 Block HelloWorld_inst/cpu0_inst_system_resetn_o_RNIUVS was optimized away.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/resetCtrl_syst
      emResetN_RNINPDE was optimized away.
-
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
      e_i/bscan_DRCK_inferred_clock_RNI3P2B was optimized away.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
@@ -1624,6 +1667,7 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
      e_i/TMS_reg/ASYNC_LOW.Q_reg_RNO[0] was optimized away.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
+
      e_i/jce_delay2_reg/ASYNC_LOW.Q_reg_RNO[0] was optimized away.
 Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridg
      e_i/jce_delay_reg/ASYNC_LOW.Q_reg_RNO[0] was optimized away.
@@ -1654,6 +1698,16 @@ Block HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/genblk2
      [0].genblk1.genblk1.u_BB_data_RNO was optimized away.
 Block HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/genblk1.
      bus_sm_cs_RNIG0M[1] was optimized away.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/genblk2
+     [3].genblk1.genblk1.u_BB_data_RNO was optimized away.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/genblk2
+     [2].genblk1.genblk1.u_BB_data_RNO was optimized away.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/genblk2
+     [1].genblk1.genblk1.u_BB_data_RNO was optimized away.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/genblk2
+     [0].genblk1.genblk1.u_BB_data_RNO was optimized away.
+Block HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/genblk1.
+     bus_sm_cs_RNIH1O1[1] was optimized away.
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp
      _true_be.u_mem/AND2_t1 was optimized away.
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp
@@ -1669,8 +1723,8 @@ Block HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/GND_0 was
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/VCC was
      optimized away.
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/GND was
-
      optimized away.
+
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp
      _true_be.u_mem/INV_1 was optimized away.
 Block HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp
@@ -1692,7 +1746,7 @@ Block HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/GND was optimized away.
     EBRs: 4
     RAM SLICEs: 0
     Logic SLICEs: 868
-    PFU Registers: 829
+    PFU Registers: 828
     -Contains EBR RegFilePlugin_regFile_1_RegFilePlugin_regFile_1_0_0:  TYPE=
          PDPW8KC,  Width= 18,  Depth_R= 32,  Depth_W= 32,  REGMODE= NOREG,
          RESETMODE= SYNC,  GSR= DISABLED
@@ -1727,8 +1781,8 @@ Block HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/GND was optimized away.
     EBRs: 16
     RAM SLICEs: 0
     Logic SLICEs: 0
-
     PFU Registers: 0
+
     -Contains EBR
          pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0:  TYPE=
          DP8KC,  Width_A= 8,  Width_B= 8,  Depth_A= 1024,  Depth_B= 2048,
@@ -1784,8 +1838,8 @@ Block HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/GND was optimized away.
          REGMODE_A= OUTREG,  REGMODE_B= OUTREG,  RESETMODE= SYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_LPC_FILE= pmi_ram_dp_true_beM8nnnnonessdrr3212409632
-
          124096p1981df17__PMIT__4096__36__36H
+
     -Contains EBR
          pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_1_3_8:  TYPE=
          DP8KC,  Width_A= 8,  Width_B= 8,  Depth_A= 1024,  Depth_B= 2048,
@@ -1841,8 +1895,8 @@ Block HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/GND was optimized away.
          REGMODE_A= OUTREG,  REGMODE_B= OUTREG,  RESETMODE= SYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_LPC_FILE= pmi_ram_dp_true_beM8nnnnonessdrr3212409632
-
          124096p1981df17__PMIT__4096__36__36H
+
 
      
 
@@ -1900,8 +1954,8 @@ Instance Name: HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.
      dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p19
      81df17_1_0_11
          Type: DP8KC
-
 Instance Name: HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.
+
      dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p19
      81df17_1_1_10
          Type: DP8KC
@@ -1957,8 +2011,8 @@ Instance Name: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_j
      tag_bridge_i/genblk2.TCK_buff
          Type: DCCA
 Instance Name: xo2chub/genblk7.jtagf_u
-
          Type: JTAGF
+
 
 
 
@@ -1983,7 +2037,7 @@ GSR Component:
      not respond to the reset signal 'rstn_i_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 168 
+   Register = 210 
    PDPW8KC = 4
 
      Type and instance name of component: 
@@ -1993,6 +2047,71 @@ GSR Component:
         /genblk3.err_sm_r[0]
    Register : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/bridge_s1.bridge_s1
         /genblk3.err_sm_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_type_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_type_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_type_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_type_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_status_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_status_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_status_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_status_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_method_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_method_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_method_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_method_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_enable_r[0]
+
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_enable_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_enable_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /int_enable_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_out_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_out_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_out_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_out_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_r[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_dr1[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_dr1[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_dr1[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /gpio_in_dr1[3]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /direction_r[0]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /direction_r[1]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /direction_r[2]
+   Register : HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
+        /direction_r[3]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /direction_r[7]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
@@ -2011,12 +2130,12 @@ GSR Component:
         /int_type_r[6]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /int_type_r[7]
+
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /int_status_r[0]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /int_status_r[1]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
-
         /int_status_r[2]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /int_status_r[3]
@@ -2068,12 +2187,12 @@ GSR Component:
         /gpio_out_r[2]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /gpio_out_r[3]
+
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /gpio_out_r[4]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /gpio_out_r[5]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
-
         /gpio_out_r[6]
    Register : HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0
         /gpio_out_r[7]
@@ -2125,12 +2244,24 @@ GSR Component:
         /direction_r[6]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/C
         srPlugin_interrupt_code[2]
+
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[5]
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[6]
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[8]
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[12]
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[13]
+   Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/m
+        emory_to_writeBack_MEMORY_READ_DATA[30]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/D
         ebugPlugin_isPipBusy
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/C
         srPlugin_mip_MSIP
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/C
-
         srPlugin_interrupt_code[3]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/resetC
         trl_systemReset
@@ -2170,6 +2301,7 @@ GSR Component:
         idge_1_/jtag_idcodeArea_shifter[10]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
         idge_1_/jtag_idcodeArea_shifter[11]
+
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
         idge_1_/jtag_idcodeArea_shifter[12]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
@@ -2187,7 +2319,6 @@ GSR Component:
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
         idge_1_/jtag_idcodeArea_shifter[19]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
-
         idge_1_/jtag_idcodeArea_shifter[20]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
         idge_1_/jtag_idcodeArea_shifter[21]
@@ -2211,6 +2342,14 @@ GSR Component:
         idge_1_/jtag_idcodeArea_shifter[30]
    Register : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBr
         idge_1_/jtag_idcodeArea_shifter[31]
+   Register : HelloWorld_inst_gpio1_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
+        _gpio_in_dr0io[0]
+   Register : HelloWorld_inst_gpio1_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
+        _gpio_in_dr0io[1]
+   Register : HelloWorld_inst_gpio1_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
+        _gpio_in_dr0io[2]
+   Register : HelloWorld_inst_gpio1_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
+        _gpio_in_dr0io[3]
    Register : HelloWorld_inst_gpio0_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
         _gpio_in_dr0io[0]
    Register : HelloWorld_inst_gpio0_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
@@ -2219,6 +2358,7 @@ GSR Component:
         _gpio_in_dr0io[2]
    Register : HelloWorld_inst_gpio0_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
         _gpio_in_dr0io[3]
+
    Register : HelloWorld_inst_gpio0_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
         _gpio_in_dr0io[4]
    Register : HelloWorld_inst_gpio0_inst_lscc_gpio_inst_genblk1.lscc_gpio_lmmi_0
@@ -2244,7 +2384,6 @@ GSR Component:
    Register : xo2chub/ip_enable[4]
    Register : xo2chub/ip_enable[5]
    Register : xo2chub/ip_enable[6]
-
    Register : xo2chub/ip_enable[7]
    Register : xo2chub/ip_enable[8]
    Register : xo2chub/ip_enable[9]
@@ -2276,6 +2415,7 @@ GSR Component:
    Register : xo2chub/bit_count[0]
    Register : xo2chub/bit_count[1]
    Register : xo2chub/bit_count[2]
+
    Register : xo2chub/bit_count[3]
    PDPW8KC : HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/Re
         gFilePlugin_regFile_1_RegFilePlugin_regFile_1_0_0
@@ -2301,7 +2441,6 @@ GSR Component:
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_3_3_0
-
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_0_0_15
@@ -2333,6 +2472,7 @@ GSR Component:
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_2_1_6
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
+
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_2_2_5
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
@@ -2357,7 +2497,6 @@ GSR Component:
 
      Type and number of components of the type: 
    DP8KC = 16
-
 
      Type and instance name of component: 
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
@@ -2390,6 +2529,7 @@ GSR Component:
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_2_0_7
+
    DP8KC : HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.r
         am_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p198
         1df17_2_1_6
@@ -2416,34 +2556,8 @@ GSR Component:
 
    Total CPU Time: 1 secs  
    Total REAL Time: 2 secs  
-   Peak Memory Usage: 87 MB
-
+   Peak Memory Usage: 88 MB
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

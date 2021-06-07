@@ -43,6 +43,7 @@
 
 component propel_soc is
     port (gpio_io: inout std_logic_vector(7 downto 0);
+        gpio1_io: inout std_logic_vector(3 downto 0);
         clk_i: in std_logic;
         rstn_i: in std_logic;
         rxd_i: in std_logic;
@@ -50,9 +51,10 @@ component propel_soc is
     );
     
 end component propel_soc; -- sbp_module=true 
-_inst: propel_soc port map (clk_i => __,
+_inst: propel_soc port map (rxd_i => __,
+                            txd_o => __,
                             rstn_i => __,
                             gpio_io => __,
-                            rxd_i => __,
-                            txd_o => __);
+                            clk_i => __,
+                            gpio1_io => __);
                             

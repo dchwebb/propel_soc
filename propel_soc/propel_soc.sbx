@@ -55,6 +55,19 @@
                     </ipxact:wire>
                 </ipxact:port>
                 <ipxact:port>
+                    <ipxact:name>gpio1_io</ipxact:name>
+                    <ipxact:displayName>gpio1_io</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>inout</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>3</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
                     <ipxact:name>gpio_io</ipxact:name>
                     <ipxact:displayName>gpio_io</ipxact:displayName>
                     <ipxact:wire>
@@ -131,6 +144,10 @@
                 <ipxact:componentRef vendor="latticesemi.com" library="ip" name="gpio0" version="1.4.1" />
             </ipxact:componentInstance>
             <ipxact:componentInstance>
+                <ipxact:instanceName>gpio1_inst</ipxact:instanceName>
+                <ipxact:componentRef vendor="latticesemi.com" library="ip" name="gpio1" version="1.4.0" />
+            </ipxact:componentInstance>
+            <ipxact:componentInstance>
                 <ipxact:instanceName>sysmem0_inst</ipxact:instanceName>
                 <ipxact:componentRef vendor="latticesemi.com" library="ip" name="sysmem0" version="1.0.2" />
             </ipxact:componentInstance>
@@ -166,6 +183,11 @@
                 <ipxact:activeInterface busRef="APB_S0" componentRef="gpio0_inst" />
             </ipxact:interconnection>
             <ipxact:interconnection>
+                <ipxact:name>apb0_inst_APB_M02_interconnect</ipxact:name>
+                <ipxact:activeInterface busRef="APB_M02" componentRef="apb0_inst" />
+                <ipxact:activeInterface busRef="APB_S0" componentRef="gpio1_inst" />
+            </ipxact:interconnection>
+            <ipxact:interconnection>
                 <ipxact:name>cpu0_inst_AHBL_M0_INSTR_interconnect</ipxact:name>
                 <ipxact:activeInterface busRef="AHBL_M0_INSTR" componentRef="cpu0_inst" />
                 <ipxact:activeInterface busRef="AHBL_S0" componentRef="sysmem0_inst" />
@@ -181,6 +203,11 @@
                 <ipxact:activeInterface busRef="IRQ_S1" componentRef="cpu0_inst" />
             </ipxact:interconnection>
             <ipxact:interconnection>
+                <ipxact:name>gpio1_inst_INTR_interconnect</ipxact:name>
+                <ipxact:activeInterface busRef="INTR" componentRef="gpio1_inst" />
+                <ipxact:activeInterface busRef="IRQ_S2" componentRef="cpu0_inst" />
+            </ipxact:interconnection>
+            <ipxact:interconnection>
                 <ipxact:name>uart0_inst_INT_M0_interconnect</ipxact:name>
                 <ipxact:activeInterface busRef="INT_M0" componentRef="uart0_inst" />
                 <ipxact:activeInterface busRef="IRQ_S0" componentRef="cpu0_inst" />
@@ -191,13 +218,14 @@
                 <ipxact:name>cpu0_inst_system_resetn_o_net</ipxact:name>
                 <ipxact:displayName>cpu0_inst_system_resetn_o_net</ipxact:displayName>
                 <ipxact:portReferences>
-                    <ipxact:internalPortReference componentRef="cpu0_inst" portRef="system_resetn_o" />
                     <ipxact:internalPortReference componentRef="ahbl0_inst" portRef="ahbl_hresetn_i" />
                     <ipxact:internalPortReference componentRef="ahbl2apb0_inst" portRef="rst_n_i" />
-                    <ipxact:internalPortReference componentRef="apb0_inst" portRef="apb_presetn_i" />
                     <ipxact:internalPortReference componentRef="gpio0_inst" portRef="resetn_i" />
                     <ipxact:internalPortReference componentRef="sysmem0_inst" portRef="ahbl_hresetn_i" />
                     <ipxact:internalPortReference componentRef="uart0_inst" portRef="rst_n_i" />
+                    <ipxact:internalPortReference componentRef="cpu0_inst" portRef="system_resetn_o" />
+                    <ipxact:internalPortReference componentRef="apb0_inst" portRef="apb_presetn_i" />
+                    <ipxact:internalPortReference componentRef="gpio1_inst" portRef="resetn_i" />
                 </ipxact:portReferences>
             </ipxact:adHocConnection>
             <ipxact:adHocConnection>
@@ -206,11 +234,12 @@
                 <ipxact:portReferences>
                     <ipxact:internalPortReference componentRef="ahbl0_inst" portRef="ahbl_hclk_i" />
                     <ipxact:internalPortReference componentRef="ahbl2apb0_inst" portRef="clk_i" />
-                    <ipxact:internalPortReference componentRef="apb0_inst" portRef="apb_pclk_i" />
                     <ipxact:internalPortReference componentRef="gpio0_inst" portRef="clk_i" />
-                    <ipxact:internalPortReference componentRef="cpu0_inst" portRef="clk_i" />
                     <ipxact:internalPortReference componentRef="sysmem0_inst" portRef="ahbl_hclk_i" />
                     <ipxact:internalPortReference componentRef="uart0_inst" portRef="clk_i" />
+                    <ipxact:internalPortReference componentRef="cpu0_inst" portRef="clk_i" />
+                    <ipxact:internalPortReference componentRef="apb0_inst" portRef="apb_pclk_i" />
+                    <ipxact:internalPortReference componentRef="gpio1_inst" portRef="clk_i" />
                     <ipxact:externalPortReference portRef="clk_i" />
                 </ipxact:portReferences>
             </ipxact:adHocConnection>
@@ -254,6 +283,28 @@
                         <ipxact:partSelect>
                             <ipxact:range>
                                 <ipxact:left>7</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:range>
+                        </ipxact:partSelect>
+                    </ipxact:externalPortReference>
+                </ipxact:portReferences>
+            </ipxact:adHocConnection>
+            <ipxact:adHocConnection>
+                <ipxact:name>propel_soc_gpio1_io_netbus</ipxact:name>
+                <ipxact:displayName>propel_soc_gpio1_io_netbus</ipxact:displayName>
+                <ipxact:portReferences>
+                    <ipxact:internalPortReference componentRef="gpio1_inst" portRef="gpio_io">
+                        <ipxact:partSelect>
+                            <ipxact:range>
+                                <ipxact:left>3</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:range>
+                        </ipxact:partSelect>
+                    </ipxact:internalPortReference>
+                    <ipxact:externalPortReference portRef="gpio1_io">
+                        <ipxact:partSelect>
+                            <ipxact:range>
+                                <ipxact:left>3</ipxact:left>
                                 <ipxact:right>0</ipxact:right>
                             </ipxact:range>
                         </ipxact:partSelect>
@@ -521,6 +572,28 @@
                 <ipxact:slave />
             </ipxact:busInterface>
             <ipxact:busInterface>
+                <ipxact:name>IRQ_S2</ipxact:name>
+                <ipxact:displayName>IRQ_S2</ipxact:displayName>
+                <ipxact:description>Interrupt Requests</ipxact:description>
+                <ipxact:busType vendor="spiritconsortium.org" library="busdef.interrupt" name="interrupt" version="1.0" />
+                <ipxact:abstractionTypes>
+                    <ipxact:abstractionType>
+                        <ipxact:abstractionRef vendor="spiritconsortium.org" library="busdef.interrupt" name="interrupt_rtl" version="1.0" />
+                        <ipxact:portMaps>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>IRQ</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>irq2_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                        </ipxact:portMaps>
+                    </ipxact:abstractionType>
+                </ipxact:abstractionTypes>
+                <ipxact:slave />
+            </ipxact:busInterface>
+            <ipxact:busInterface>
                 <ipxact:name>TIMER_IRQ_M0</ipxact:name>
                 <ipxact:displayName>TIMER_IRQ_M0</ipxact:displayName>
                 <ipxact:description>Timer IRQ Output</ipxact:description>
@@ -553,6 +626,12 @@
                         <ipxact:name>propel_soc_gpio0_inst_gpio_mem_map</ipxact:name>
                         <ipxact:displayName>propel_soc/gpio0_inst/gpio_mem_map</ipxact:displayName>
                         <ipxact:addressOffset>32&apos;h00008000</ipxact:addressOffset>
+                        <ipxact:range>32&apos;h00000400</ipxact:range>
+                    </ipxact:segment>
+                    <ipxact:segment>
+                        <ipxact:name>propel_soc_gpio1_inst_gpio_mem_map</ipxact:name>
+                        <ipxact:displayName>propel_soc/gpio1_inst/gpio_mem_map</ipxact:displayName>
+                        <ipxact:addressOffset>32&apos;h00008800</ipxact:addressOffset>
                         <ipxact:range>32&apos;h00000400</ipxact:range>
                     </ipxact:segment>
                     <ipxact:segment>
@@ -751,6 +830,13 @@
                 <ipxact:port>
                     <ipxact:name>irq1_i</ipxact:name>
                     <ipxact:displayName>irq1_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>irq2_i</ipxact:name>
+                    <ipxact:displayName>irq2_i</ipxact:displayName>
                     <ipxact:wire>
                         <ipxact:direction>in</ipxact:direction>
                     </ipxact:wire>
@@ -979,14 +1065,12 @@
         <ipxact:vendorExtensions>
             <lsccip:moduleRef lsccip:library="ip" lsccip:name="riscv_mc" lsccip:vendor="latticesemi.com" lsccip:version="2.0.0" lsccip:type="cpu" />
             <lsccip:deviceInfo>
-                <lsccip:device>LCMXO3L-1300C</lsccip:device>
-                <lsccip:architecture>MachXO3L</lsccip:architecture>
+                <lsccip:device>LCMXO3LF-6900C</lsccip:device>
+                <lsccip:architecture>MachXO3LF</lsccip:architecture>
                 <lsccip:package>CABGA256</lsccip:package>
             </lsccip:deviceInfo>
+            <lsccip:instantiatedOnce>true</lsccip:instantiatedOnce>
             <lattice:radiant>3.0.t.50.0</lattice:radiant>
-            <lattice:attributes>
-                <lattice:attribute lattice:name="DEBUG_ENABLE">True</lattice:attribute>
-            </lattice:attributes>
         </ipxact:vendorExtensions>
     </ipxact:component>
     <ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
@@ -1255,6 +1339,277 @@
             <lsccip:deviceInfo>
                 <lsccip:device>LCMXO3L-9400C</lsccip:device>
                 <lsccip:architecture>MachXO3L</lsccip:architecture>
+                <lsccip:package>CABGA256</lsccip:package>
+            </lsccip:deviceInfo>
+            <lattice:radiant>3.0.t.50.0</lattice:radiant>
+        </ipxact:vendorExtensions>
+    </ipxact:component>
+    <ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+        <ipxact:vendor>latticesemi.com</ipxact:vendor>
+        <ipxact:library>ip</ipxact:library>
+        <ipxact:name>gpio1</ipxact:name>
+        <ipxact:version>1.4.0</ipxact:version>
+        <ipxact:busInterfaces>
+            <ipxact:busInterface>
+                <ipxact:name>APB_S0</ipxact:name>
+                <ipxact:displayName>APB_S0</ipxact:displayName>
+                <ipxact:description>APB slave port</ipxact:description>
+                <ipxact:busType vendor="amba.com" library="AMBA3" name="APB" version="r1p0" />
+                <ipxact:abstractionTypes>
+                    <ipxact:abstractionType>
+                        <ipxact:abstractionRef vendor="amba.com" library="AMBA3" name="APB_rtl" version="r1p0" />
+                        <ipxact:portMaps>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PADDR</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_paddr_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PENABLE</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_penable_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PRDATA</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_prdata_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PREADY</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_pready_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PSELx</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_psel_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PSLVERR</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_pslverr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PWDATA</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_pwdata_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PWRITE</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_pwrite_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                        </ipxact:portMaps>
+                    </ipxact:abstractionType>
+                </ipxact:abstractionTypes>
+                <ipxact:slave>
+                    <ipxact:memoryMapRef memoryMapRef="gpio_mem_map" />
+                </ipxact:slave>
+            </ipxact:busInterface>
+            <ipxact:busInterface>
+                <ipxact:name>INTR</ipxact:name>
+                <ipxact:displayName>INTR</ipxact:displayName>
+                <ipxact:description>Interrupt Request</ipxact:description>
+                <ipxact:busType vendor="spiritconsortium.org" library="busdef.interrupt" name="interrupt" version="1.0" />
+                <ipxact:abstractionTypes>
+                    <ipxact:abstractionType>
+                        <ipxact:abstractionRef vendor="spiritconsortium.org" library="busdef.interrupt" name="interrupt_rtl" version="1.0" />
+                        <ipxact:portMaps>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>IRQ</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>int_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                        </ipxact:portMaps>
+                    </ipxact:abstractionType>
+                </ipxact:abstractionTypes>
+                <ipxact:master />
+            </ipxact:busInterface>
+        </ipxact:busInterfaces>
+        <ipxact:memoryMaps>
+            <ipxact:memoryMap>
+                <ipxact:name>gpio_mem_map</ipxact:name>
+                <ipxact:description>GPIO memory map</ipxact:description>
+                <ipxact:addressBlock>
+                    <ipxact:name>GPIO_Registers</ipxact:name>
+                    <ipxact:baseAddress>32&apos;h00008800</ipxact:baseAddress>
+                    <ipxact:range>32&apos;h00000400</ipxact:range>
+                    <ipxact:width>32</ipxact:width>
+                    <ipxact:vendorExtensions>
+                        <lattice:fixedOffset>true</lattice:fixedOffset>
+                    </ipxact:vendorExtensions>
+                </ipxact:addressBlock>
+            </ipxact:memoryMap>
+        </ipxact:memoryMaps>
+        <ipxact:model>
+            <ipxact:instantiations>
+                <ipxact:componentInstantiation>
+                    <ipxact:name>gpio1</ipxact:name>
+                </ipxact:componentInstantiation>
+                <ipxact:designInstantiation>
+                    <ipxact:name>gpio1_design</ipxact:name>
+                    <ipxact:designRef vendor="latticesemi.com" library="ip" name="gpio1" version="1.4.0" />
+                </ipxact:designInstantiation>
+            </ipxact:instantiations>
+            <ipxact:ports>
+                <ipxact:port>
+                    <ipxact:name>apb_penable_i</ipxact:name>
+                    <ipxact:displayName>apb_penable_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_pready_o</ipxact:name>
+                    <ipxact:displayName>apb_pready_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_psel_i</ipxact:name>
+                    <ipxact:displayName>apb_psel_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_pslverr_o</ipxact:name>
+                    <ipxact:displayName>apb_pslverr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_pwrite_i</ipxact:name>
+                    <ipxact:displayName>apb_pwrite_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>clk_i</ipxact:name>
+                    <ipxact:displayName>clk_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                    <ipxact:vendorExtensions>
+                        <lsccip:isClk>true</lsccip:isClk>
+                    </ipxact:vendorExtensions>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>int_o</ipxact:name>
+                    <ipxact:displayName>int_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>resetn_i</ipxact:name>
+                    <ipxact:displayName>resetn_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                    <ipxact:vendorExtensions>
+                        <lsccip:isRst>true</lsccip:isRst>
+                    </ipxact:vendorExtensions>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_paddr_i</ipxact:name>
+                    <ipxact:displayName>apb_paddr_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>5</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_prdata_o</ipxact:name>
+                    <ipxact:displayName>apb_prdata_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>31</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_pwdata_i</ipxact:name>
+                    <ipxact:displayName>apb_pwdata_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>31</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>gpio_io</ipxact:name>
+                    <ipxact:displayName>gpio_io</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>inout</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>3</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+            </ipxact:ports>
+        </ipxact:model>
+        <ipxact:fileSets>
+            <ipxact:fileSet>
+                <ipxact:name>IP</ipxact:name>
+                <ipxact:group>ip</ipxact:group>
+                <ipxact:file>
+                    <ipxact:name>./lib/latticesemi.com/ip/gpio1/1.4.0/component.xml</ipxact:name>
+                    <ipxact:fileType user="xml">user</ipxact:fileType>
+                </ipxact:file>
+            </ipxact:fileSet>
+        </ipxact:fileSets>
+        <ipxact:vendorExtensions>
+            <lsccip:moduleRef lsccip:library="ip" lsccip:name="gpio" lsccip:vendor="latticesemi.com" lsccip:version="1.4.0" />
+            <lsccip:deviceInfo>
+                <lsccip:device>LCMXO3LF-6900C</lsccip:device>
+                <lsccip:architecture>MachXO3LF</lsccip:architecture>
                 <lsccip:package>CABGA256</lsccip:package>
             </lsccip:deviceInfo>
             <lattice:radiant>3.0.t.50.0</lattice:radiant>
@@ -7681,7 +8036,7 @@
                         <ipxact:moduleParameter configGroups="SystemBuilder" parameterId="S1_ADDR_RANGE" resolve="generated" type="string">
                             <ipxact:name>S1_ADDR_RANGE</ipxact:name>
                             <ipxact:displayName>INFO: Actual Address Range</ipxact:displayName>
-                            <ipxact:value>32&apos;h00000800</ipxact:value>
+                            <ipxact:value>32&apos;h00000C00</ipxact:value>
                         </ipxact:moduleParameter>
                         <ipxact:moduleParameter configGroups="SystemBuilder" parameterId="S1_BASE_ADDR" resolve="generated" type="string">
                             <ipxact:name>S1_BASE_ADDR</ipxact:name>
@@ -8811,6 +9166,94 @@
                 </ipxact:parameters>
             </ipxact:busInterface>
             <ipxact:busInterface>
+                <ipxact:name>APB_M02</ipxact:name>
+                <ipxact:displayName>APB_M02</ipxact:displayName>
+                <ipxact:description>APB Master 2 Port</ipxact:description>
+                <ipxact:busType vendor="amba.com" library="AMBA3" name="APB" version="r1p0" />
+                <ipxact:abstractionTypes>
+                    <ipxact:abstractionType>
+                        <ipxact:abstractionRef vendor="amba.com" library="AMBA3" name="APB_rtl" version="r1p0" />
+                        <ipxact:portMaps>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PADDR</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_paddr_mstr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PENABLE</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_penable_mstr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PRDATA</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_prdata_mstr_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PREADY</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_pready_mstr_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PSELx</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_psel_mstr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PSLVERR</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_pslverr_mstr_i</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PWDATA</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_pwdata_mstr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                            <ipxact:portMap>
+                                <ipxact:logicalPort>
+                                    <ipxact:name>PWRITE</ipxact:name>
+                                </ipxact:logicalPort>
+                                <ipxact:physicalPort>
+                                    <ipxact:name>apb_m02_pwrite_mstr_o</ipxact:name>
+                                </ipxact:physicalPort>
+                            </ipxact:portMap>
+                        </ipxact:portMaps>
+                    </ipxact:abstractionType>
+                </ipxact:abstractionTypes>
+                <ipxact:master />
+                <ipxact:parameters>
+                    <ipxact:parameter>
+                        <ipxact:name>SB_BASE_ADDR</ipxact:name>
+                        <ipxact:value>S2_BASE_ADDR</ipxact:value>
+                    </ipxact:parameter>
+                    <ipxact:parameter>
+                        <ipxact:name>SB_RANGE</ipxact:name>
+                        <ipxact:value>S2_ADDR_RANGE</ipxact:value>
+                    </ipxact:parameter>
+                </ipxact:parameters>
+            </ipxact:busInterface>
+            <ipxact:busInterface>
                 <ipxact:name>APB_S00</ipxact:name>
                 <ipxact:displayName>APB_S00</ipxact:displayName>
                 <ipxact:description>APB Slave 0 port</ipxact:description>
@@ -8924,6 +9367,16 @@
                             <ipxact:displayName>S1 Base Address</ipxact:displayName>
                             <ipxact:value>32&apos;h00008000</ipxact:value>
                         </ipxact:moduleParameter>
+                        <ipxact:moduleParameter configGroups="SystemBuilder" parameterId="S2_ADDR_RANGE" resolve="generated" type="string">
+                            <ipxact:name>S2_ADDR_RANGE</ipxact:name>
+                            <ipxact:displayName>S2 Address Range</ipxact:displayName>
+                            <ipxact:value>32&apos;h00000400</ipxact:value>
+                        </ipxact:moduleParameter>
+                        <ipxact:moduleParameter configGroups="SystemBuilder" parameterId="S2_BASE_ADDR" resolve="generated" type="string">
+                            <ipxact:name>S2_BASE_ADDR</ipxact:name>
+                            <ipxact:displayName>S2 Base Address</ipxact:displayName>
+                            <ipxact:value>32&apos;h00008800</ipxact:value>
+                        </ipxact:moduleParameter>
                     </ipxact:moduleParameters>
                 </ipxact:componentInstantiation>
                 <ipxact:designInstantiation>
@@ -8998,6 +9451,41 @@
                 <ipxact:port>
                     <ipxact:name>apb_m01_pwrite_mstr_o</ipxact:name>
                     <ipxact:displayName>apb_m01_pwrite_mstr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_penable_mstr_o</ipxact:name>
+                    <ipxact:displayName>apb_m02_penable_mstr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_pready_mstr_i</ipxact:name>
+                    <ipxact:displayName>apb_m02_pready_mstr_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_psel_mstr_o</ipxact:name>
+                    <ipxact:displayName>apb_m02_psel_mstr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_pslverr_mstr_i</ipxact:name>
+                    <ipxact:displayName>apb_m02_pslverr_mstr_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_pwrite_mstr_o</ipxact:name>
+                    <ipxact:displayName>apb_m02_pwrite_mstr_o</ipxact:displayName>
                     <ipxact:wire>
                         <ipxact:direction>out</ipxact:direction>
                     </ipxact:wire>
@@ -9136,6 +9624,45 @@
                     </ipxact:wire>
                 </ipxact:port>
                 <ipxact:port>
+                    <ipxact:name>apb_m02_paddr_mstr_o</ipxact:name>
+                    <ipxact:displayName>apb_m02_paddr_mstr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>31</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_prdata_mstr_i</ipxact:name>
+                    <ipxact:displayName>apb_m02_prdata_mstr_i</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>in</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>31</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
+                    <ipxact:name>apb_m02_pwdata_mstr_o</ipxact:name>
+                    <ipxact:displayName>apb_m02_pwdata_mstr_o</ipxact:displayName>
+                    <ipxact:wire>
+                        <ipxact:direction>out</ipxact:direction>
+                        <ipxact:vectors>
+                            <ipxact:vector>
+                                <ipxact:left>31</ipxact:left>
+                                <ipxact:right>0</ipxact:right>
+                            </ipxact:vector>
+                        </ipxact:vectors>
+                    </ipxact:wire>
+                </ipxact:port>
+                <ipxact:port>
                     <ipxact:name>apb_s00_paddr_slv_i</ipxact:name>
                     <ipxact:displayName>apb_s00_paddr_slv_i</ipxact:displayName>
                     <ipxact:wire>
@@ -9199,8 +9726,8 @@
         <ipxact:vendorExtensions>
             <lsccip:moduleRef lsccip:library="module" lsccip:name="apb_interconnect" lsccip:vendor="latticesemi.com" lsccip:version="1.0.6" />
             <lsccip:deviceInfo>
-                <lsccip:device>LCMXO3L-9400C</lsccip:device>
-                <lsccip:architecture>MachXO3L</lsccip:architecture>
+                <lsccip:device>LCMXO3LF-6900C</lsccip:device>
+                <lsccip:architecture>MachXO3LF</lsccip:architecture>
                 <lsccip:package>CABGA256</lsccip:package>
             </lsccip:deviceInfo>
             <lattice:radiant>3.0.t.50.0</lattice:radiant>

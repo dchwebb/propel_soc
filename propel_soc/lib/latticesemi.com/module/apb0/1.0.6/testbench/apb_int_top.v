@@ -67,8 +67,8 @@ input         apb_presetn_i     ,
 
 input  [0:0] apb_mstr_dummy_in ,
 output [0:0] apb_mstr_dummy_out,
-input  [1:0] apb_slv_dummy_in  ,
-output [1:0] apb_slv_dummy_out
+input  [2:0] apb_slv_dummy_in  ,
+output [2:0] apb_slv_dummy_out
 );
 
 `include "dut_params.v"
@@ -100,6 +100,15 @@ output [1:0] apb_slv_dummy_out
   wire                    apb_m01_pready_mstr_i ;
   wire                    apb_m01_pslverr_mstr_i;
   wire [DATA_WIDTH-1:0]   apb_m01_prdata_mstr_i ;
+
+  wire                    apb_m02_psel_mstr_o   ;
+  wire [M_ADDR_WIDTH-1:0] apb_m02_paddr_mstr_o  ;
+  wire                    apb_m02_pwrite_mstr_o ;
+  wire [DATA_WIDTH-1:0]   apb_m02_pwdata_mstr_o ;
+  wire                    apb_m02_penable_mstr_o;
+  wire                    apb_m02_pready_mstr_i ;
+  wire                    apb_m02_pslverr_mstr_i;
+  wire [DATA_WIDTH-1:0]   apb_m02_prdata_mstr_i ;
 
   lscc_apb_master_dummy #(
     .DATA_WIDTH(DATA_WIDTH  ),
@@ -153,6 +162,23 @@ output [1:0] apb_slv_dummy_out
     .apb_prdata_o     (apb_m01_prdata_mstr_i ),
     .apb_slv_dummy_in (apb_slv_dummy_in[1]    ),
     .apb_slv_dummy_out(apb_slv_dummy_out[1]   ));
+
+  lscc_apb_slave_dummy #(
+    .DATA_WIDTH(DATA_WIDTH  ),
+    .ADDR_WIDTH(M_ADDR_WIDTH))
+  apb_slv_02 (
+    .apb_pclk_i       (apb_pclk_i              ),
+    .apb_presetn_i    (apb_presetn_i           ),
+    .apb_psel_i       (apb_m02_psel_mstr_o   ),
+    .apb_paddr_i      (apb_m02_paddr_mstr_o  ),
+    .apb_pwdata_i     (apb_m02_pwdata_mstr_o ),
+    .apb_pwrite_i     (apb_m02_pwrite_mstr_o ),
+    .apb_penable_i    (apb_m02_penable_mstr_o),
+    .apb_pready_o     (apb_m02_pready_mstr_i ),
+    .apb_pslverr_o    (apb_m02_pslverr_mstr_i),
+    .apb_prdata_o     (apb_m02_prdata_mstr_i ),
+    .apb_slv_dummy_in (apb_slv_dummy_in[2]    ),
+    .apb_slv_dummy_out(apb_slv_dummy_out[2]   ));
 
 
 `include "dut_inst.v"

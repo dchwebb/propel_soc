@@ -1,6 +1,7 @@
     cpu0 u_cpu0(.clk_i(clk_i),
         .rst_n_i(rst_n_i),
         .system_resetn_o(system_resetn_o),
+        .irq2_i(irq2_i),
         .irq1_i(irq1_i),
         .irq0_i(irq0_i),
         .timer_irq_o(timer_irq_o),

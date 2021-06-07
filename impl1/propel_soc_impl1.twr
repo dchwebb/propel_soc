@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Sun Jun 06 17:04:39 2021
+Mon Jun 07 17:29:54 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -42,876 +42,842 @@ Preference: FREQUENCY NET "sys_clk" 38.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 3.746ns
+Passed: The following path meets requirements by 3.676ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[3]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4(ASIC)  (to sys_clk +)
 
-   Delay:              22.437ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.756ns  (29.7% logic, 70.3% route), 22 logic levels.
 
  Constraint Details:
 
-     22.437ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247 meets
+     22.756ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.746ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.676ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.871      R8C15C.F1 to     R10C15D.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408     R10C15D.B1 to     R10C15D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247
-ROUTE         1     0.000     R10C15D.F1 to    R10C15D.DI1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[3] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOF0_DE  ---     0.450    R16C18B.FCI to     R16C18B.F0 HelloWorld_inst/SLICE_77
+ROUTE         6     1.733     R16C18B.F0 to     R12C24B.C1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[25]
+CTOF_DEL    ---     0.408     R12C24B.C1 to     R12C24B.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         1     0.761     R12C24B.F1 to     R12C24B.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_8
+CTOF_DEL    ---     0.408     R12C24B.A0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.870     R15C24C.F0 to  EBR_R20C1.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.437   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.756   (29.7% logic, 70.3% route), 22 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R10C15D.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C1.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.746ns
+Passed: The following path meets requirements by 3.678ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[2]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4(ASIC)  (to sys_clk +)
 
-   Delay:              22.437ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.754ns  (31.4% logic, 68.6% route), 25 logic levels.
 
  Constraint Details:
 
-     22.437ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247 meets
+     22.754ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.746ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.678ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.871      R8C15C.F1 to     R10C15D.B0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408     R10C15D.B0 to     R10C15D.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247
-ROUTE         1     0.000     R10C15D.F0 to    R10C15D.DI0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[2] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOFCO_D  ---     0.130    R16C18B.FCI to    R16C18B.FCO HelloWorld_inst/SLICE_77
+ROUTE         1     0.000    R16C18B.FCO to    R16C18C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
+FCITOFCO_D  ---     0.130    R16C18C.FCI to    R16C18C.FCO HelloWorld_inst/SLICE_76
+ROUTE         1     0.000    R16C18C.FCO to    R16C18D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
+FCITOFCO_D  ---     0.130    R16C18D.FCI to    R16C18D.FCO HelloWorld_inst/SLICE_75
+ROUTE         1     0.000    R16C18D.FCO to    R16C19A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_30
+FCITOF0_DE  ---     0.450    R16C19A.FCI to     R16C19A.F0 HelloWorld_inst/SLICE_74
+ROUTE         8     1.623     R16C19A.F0 to     R12C25C.B1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[31]
+CTOF_DEL    ---     0.408     R12C25C.B1 to     R12C25C.F1 SLICE_1974
+ROUTE         1     0.479     R12C25C.F1 to     R12C24B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_13
+CTOF_DEL    ---     0.408     R12C24B.D0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.870     R15C24C.F0 to  EBR_R20C1.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.437   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.754   (31.4% logic, 68.6% route), 25 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_247:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R10C15D.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C1.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.757ns
+Passed: The following path meets requirements by 3.696ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[28]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[21]  (to sys_clk +)
+                   FF                        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[20]
 
-   Delay:              22.426ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.403ns  (32.0% logic, 68.0% route), 23 logic levels.
 
  Constraint Details:
 
-     22.426ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242 meets
+     22.403ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239 meets
      26.316ns delay constraint less
       0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.757ns
+      0.217ns CE_SET requirement (totaling 26.099ns) by 3.696ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.860      R8C15C.F1 to      R8C16C.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R8C16C.B1 to      R8C16C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242
-ROUTE         1     0.000      R8C16C.F1 to     R8C16C.DI1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[28] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOF0_DE  ---     0.450    R16C18B.FCI to     R16C18B.F0 HelloWorld_inst/SLICE_77
+ROUTE         6     1.733     R16C18B.F0 to     R12C24B.C1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[25]
+CTOF_DEL    ---     0.408     R12C24B.C1 to     R12C24B.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         1     0.761     R12C24B.F1 to     R12C24B.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_8
+CTOF_DEL    ---     0.408     R12C24B.A0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     1.031     R16C26B.F1 to     R16C31D.C1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R16C31D.C1 to     R16C31D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1392
+ROUTE        17     1.286     R16C31D.F1 to     R17C33D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_67
+CTOF_DEL    ---     0.408     R17C33D.D1 to     R17C33D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1846
+ROUTE         3     0.611     R17C33D.F1 to     R17C33B.C0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_113
+CTOF_DEL    ---     0.408     R17C33B.C0 to     R17C33B.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1397
+ROUTE         1     0.805     R17C33B.F0 to     R17C31B.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0_RNO_0
+CTOF_DEL    ---     0.408     R17C31B.B1 to     R17C31B.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1388
+ROUTE        14     1.515     R17C31B.F1 to     R16C25D.CE HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0 (to sys_clk)
                   --------
-                   22.426   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.403   (32.0% logic, 68.0% route), 23 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R8C16C.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to    R16C25D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.757ns
+Passed: The following path meets requirements by 3.698ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[27]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[21]  (to sys_clk +)
+                   FF                        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[20]
 
-   Delay:              22.426ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.401ns  (33.7% logic, 66.3% route), 26 logic levels.
 
  Constraint Details:
 
-     22.426ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242 meets
+     22.401ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239 meets
      26.316ns delay constraint less
       0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.757ns
+      0.217ns CE_SET requirement (totaling 26.099ns) by 3.698ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.860      R8C15C.F1 to      R8C16C.B0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R8C16C.B0 to      R8C16C.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242
-ROUTE         1     0.000      R8C16C.F0 to     R8C16C.DI0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[27] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOFCO_D  ---     0.130    R16C18B.FCI to    R16C18B.FCO HelloWorld_inst/SLICE_77
+ROUTE         1     0.000    R16C18B.FCO to    R16C18C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
+FCITOFCO_D  ---     0.130    R16C18C.FCI to    R16C18C.FCO HelloWorld_inst/SLICE_76
+ROUTE         1     0.000    R16C18C.FCO to    R16C18D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
+FCITOFCO_D  ---     0.130    R16C18D.FCI to    R16C18D.FCO HelloWorld_inst/SLICE_75
+ROUTE         1     0.000    R16C18D.FCO to    R16C19A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_30
+FCITOF0_DE  ---     0.450    R16C19A.FCI to     R16C19A.F0 HelloWorld_inst/SLICE_74
+ROUTE         8     1.623     R16C19A.F0 to     R12C25C.B1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[31]
+CTOF_DEL    ---     0.408     R12C25C.B1 to     R12C25C.F1 SLICE_1974
+ROUTE         1     0.479     R12C25C.F1 to     R12C24B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_13
+CTOF_DEL    ---     0.408     R12C24B.D0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     1.031     R16C26B.F1 to     R16C31D.C1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R16C31D.C1 to     R16C31D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1392
+ROUTE        17     1.286     R16C31D.F1 to     R17C33D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_67
+CTOF_DEL    ---     0.408     R17C33D.D1 to     R17C33D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1846
+ROUTE         3     0.611     R17C33D.F1 to     R17C33B.C0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_113
+CTOF_DEL    ---     0.408     R17C33B.C0 to     R17C33B.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1397
+ROUTE         1     0.805     R17C33B.F0 to     R17C31B.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0_RNO_0
+CTOF_DEL    ---     0.408     R17C31B.B1 to     R17C31B.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1388
+ROUTE        14     1.515     R17C31B.F1 to     R16C25D.CE HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0 (to sys_clk)
                   --------
-                   22.426   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.401   (33.7% logic, 66.3% route), 26 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_242:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R8C16C.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to    R16C25D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.769ns
+Passed: The following path meets requirements by 3.716ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[16]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4(ASIC)  (to sys_clk +)
 
-   Delay:              22.414ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.716ns  (27.1% logic, 72.9% route), 17 logic levels.
 
  Constraint Details:
 
-     22.414ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236 meets
+     22.716ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.769ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.716ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.848      R8C15C.F1 to      R8C15A.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R8C15A.B1 to      R8C15A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236
-ROUTE         1     0.000      R8C15A.F1 to     R8C15A.DI1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[16] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOF1_DE  ---     0.495    R16C17A.FCI to     R16C17A.F1 HelloWorld_inst/SLICE_82
+ROUTE         5     2.298     R16C17A.F1 to     R12C24B.B1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[16]
+CTOF_DEL    ---     0.408     R12C24B.B1 to     R12C24B.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         1     0.761     R12C24B.F1 to     R12C24B.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_8
+CTOF_DEL    ---     0.408     R12C24B.A0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.870     R15C24C.F0 to  EBR_R20C1.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.414   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.716   (27.1% logic, 72.9% route), 17 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R8C15A.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C1.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.769ns
+Passed: The following path meets requirements by 3.733ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[15]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4(ASIC)  (to sys_clk +)
 
-   Delay:              22.414ns  (34.6% logic, 65.4% route), 23 logic levels.
+   Delay:              22.699ns  (26.5% logic, 73.5% route), 16 logic levels.
 
  Constraint Details:
 
-     22.414ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236 meets
+     22.699ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.769ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.733ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.848      R8C15C.F1 to      R8C15A.B0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R8C15A.B0 to      R8C15A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236
-ROUTE         1     0.000      R8C15A.F0 to     R8C15A.DI0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[15] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOF1_DE  ---     0.495    R16C16D.FCI to     R16C16D.F1 HelloWorld_inst/SLICE_83
+ROUTE         7     2.693     R16C16D.F1 to     R12C25C.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[14]
+CTOF_DEL    ---     0.408     R12C25C.D1 to     R12C25C.F1 SLICE_1974
+ROUTE         1     0.479     R12C25C.F1 to     R12C24B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_13
+CTOF_DEL    ---     0.408     R12C24B.D0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.870     R15C24C.F0 to  EBR_R20C1.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.414   (34.6% logic, 65.4% route), 23 logic levels.
+                   22.699   (26.5% logic, 73.5% route), 16 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_236:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_2_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R8C15A.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C1.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.790ns
+Passed: The following path meets requirements by 3.736ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[30]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[21]  (to sys_clk +)
+                   FF                        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[20]
 
-   Delay:              22.393ns  (34.7% logic, 65.3% route), 23 logic levels.
+   Delay:              22.363ns  (29.3% logic, 70.7% route), 18 logic levels.
 
  Constraint Details:
 
-     22.393ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243 meets
+     22.363ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239 meets
      26.316ns delay constraint less
       0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.790ns
+      0.217ns CE_SET requirement (totaling 26.099ns) by 3.736ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.827      R8C15C.F1 to      R9C17C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R9C17C.D1 to      R9C17C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243
-ROUTE         1     0.000      R9C17C.F1 to     R9C17C.DI1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[30] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOF1_DE  ---     0.495    R16C17A.FCI to     R16C17A.F1 HelloWorld_inst/SLICE_82
+ROUTE         5     2.298     R16C17A.F1 to     R12C24B.B1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[16]
+CTOF_DEL    ---     0.408     R12C24B.B1 to     R12C24B.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         1     0.761     R12C24B.F1 to     R12C24B.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_8
+CTOF_DEL    ---     0.408     R12C24B.A0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     1.031     R16C26B.F1 to     R16C31D.C1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R16C31D.C1 to     R16C31D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1392
+ROUTE        17     1.286     R16C31D.F1 to     R17C33D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_67
+CTOF_DEL    ---     0.408     R17C33D.D1 to     R17C33D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1846
+ROUTE         3     0.611     R17C33D.F1 to     R17C33B.C0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_113
+CTOF_DEL    ---     0.408     R17C33B.C0 to     R17C33B.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1397
+ROUTE         1     0.805     R17C33B.F0 to     R17C31B.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0_RNO_0
+CTOF_DEL    ---     0.408     R17C31B.B1 to     R17C31B.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1388
+ROUTE        14     1.515     R17C31B.F1 to     R16C25D.CE HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0 (to sys_clk)
                   --------
-                   22.393   (34.7% logic, 65.3% route), 23 logic levels.
+                   22.363   (29.3% logic, 70.7% route), 18 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R9C17C.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to    R16C25D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.790ns
+Passed: The following path meets requirements by 3.753ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[26]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[21]  (to sys_clk +)
+                   FF                        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[20]
 
-   Delay:              22.393ns  (34.7% logic, 65.3% route), 23 logic levels.
+   Delay:              22.346ns  (28.7% logic, 71.3% route), 17 logic levels.
 
  Constraint Details:
 
-     22.393ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_241 meets
+     22.346ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239 meets
      26.316ns delay constraint less
       0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.790ns
+      0.217ns CE_SET requirement (totaling 26.099ns) by 3.753ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_241:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.827      R8C15C.F1 to      R9C17A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R9C17A.D1 to      R9C17A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_241
-ROUTE         1     0.000      R9C17A.F1 to     R9C17A.DI1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[26] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOF1_DE  ---     0.495    R16C16D.FCI to     R16C16D.F1 HelloWorld_inst/SLICE_83
+ROUTE         7     2.693     R16C16D.F1 to     R12C25C.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[14]
+CTOF_DEL    ---     0.408     R12C25C.D1 to     R12C25C.F1 SLICE_1974
+ROUTE         1     0.479     R12C25C.F1 to     R12C24B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_13
+CTOF_DEL    ---     0.408     R12C24B.D0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     1.031     R16C26B.F1 to     R16C31D.C1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R16C31D.C1 to     R16C31D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1392
+ROUTE        17     1.286     R16C31D.F1 to     R17C33D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_67
+CTOF_DEL    ---     0.408     R17C33D.D1 to     R17C33D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1846
+ROUTE         3     0.611     R17C33D.F1 to     R17C33B.C0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_113
+CTOF_DEL    ---     0.408     R17C33B.C0 to     R17C33B.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1397
+ROUTE         1     0.805     R17C33B.F0 to     R17C31B.B1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0_RNO_0
+CTOF_DEL    ---     0.408     R17C31B.B1 to     R17C31B.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1388
+ROUTE        14     1.515     R17C31B.F1 to     R16C25D.CE HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un2_ns_ahbl_sm_4_0_0 (to sys_clk)
                   --------
-                   22.393   (34.7% logic, 65.3% route), 23 logic levels.
+                   22.346   (28.7% logic, 71.3% route), 17 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_241:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_239:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R9C17A.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to    R16C25D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.790ns
+Passed: The following path meets requirements by 3.780ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[19]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0(ASIC)  (to sys_clk +)
 
-   Delay:              22.393ns  (34.7% logic, 65.3% route), 23 logic levels.
+   Delay:              22.652ns  (29.8% logic, 70.2% route), 22 logic levels.
 
  Constraint Details:
 
-     22.393ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_238 meets
+     22.652ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.790ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.780ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_238:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.827      R8C15C.F1 to      R9C17D.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R9C17D.D0 to      R9C17D.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_238
-ROUTE         1     0.000      R9C17D.F0 to     R9C17D.DI0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[19] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOF0_DE  ---     0.450    R16C18B.FCI to     R16C18B.F0 HelloWorld_inst/SLICE_77
+ROUTE         6     1.733     R16C18B.F0 to     R12C24B.C1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[25]
+CTOF_DEL    ---     0.408     R12C24B.C1 to     R12C24B.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         1     0.761     R12C24B.F1 to     R12C24B.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_8
+CTOF_DEL    ---     0.408     R12C24B.A0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.766     R15C24C.F0 to  EBR_R20C4.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.393   (34.7% logic, 65.3% route), 23 logic levels.
+                   22.652   (29.8% logic, 70.2% route), 22 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_238:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R9C17D.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C4.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 3.790ns
+Passed: The following path meets requirements by 3.782ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r[29]  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]  (from sys_clk +)
+   Destination:    DP8KC      Port           HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0(ASIC)  (to sys_clk +)
 
-   Delay:              22.393ns  (34.7% logic, 65.3% route), 23 logic levels.
+   Delay:              22.650ns  (31.5% logic, 68.5% route), 25 logic levels.
 
  Constraint Details:
 
-     22.393ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243 meets
+     22.650ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0 meets
      26.316ns delay constraint less
-      0.000ns skew and
-      0.133ns DIN_SET requirement (totaling 26.183ns) by 3.790ns
+     -0.133ns skew and
+      0.017ns WE_SET requirement (totaling 26.432ns) by 3.782ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R18C13D.CLK to     R18C13D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732 (from sys_clk)
-ROUTE        65     1.306     R18C13D.Q1 to      R16C9D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_SRC2_CTRL[1]
-CTOF_DEL    ---     0.408      R16C9D.C1 to      R16C9D.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         1     0.785      R16C9D.F1 to      R16C9D.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_660
-CTOF_DEL    ---     0.408      R16C9D.B0 to      R16C9D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1268
-ROUTE         4     1.249      R16C9D.F0 to     R14C11C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[14]
-CTOF_DEL    ---     0.408     R14C11C.D0 to     R14C11C.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1838
-ROUTE         1     1.951     R14C11C.F0 to     R14C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_13_0_RNO_0
-C1TOFCO_DE  ---     0.684     R14C15D.C1 to    R14C15D.FCO HelloWorld_inst/SLICE_83
-ROUTE         1     0.000    R14C15D.FCO to    R14C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
-FCITOFCO_D  ---     0.130    R14C16A.FCI to    R14C16A.FCO HelloWorld_inst/SLICE_82
-ROUTE         1     0.000    R14C16A.FCO to    R14C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
-FCITOFCO_D  ---     0.130    R14C16B.FCI to    R14C16B.FCO HelloWorld_inst/SLICE_81
-ROUTE         1     0.000    R14C16B.FCO to    R14C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
-FCITOFCO_D  ---     0.130    R14C16C.FCI to    R14C16C.FCO HelloWorld_inst/SLICE_80
-ROUTE         1     0.000    R14C16C.FCO to    R14C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
-FCITOFCO_D  ---     0.130    R14C16D.FCI to    R14C16D.FCO HelloWorld_inst/SLICE_79
-ROUTE         1     0.000    R14C16D.FCO to    R14C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
-FCITOFCO_D  ---     0.130    R14C17A.FCI to    R14C17A.FCO HelloWorld_inst/SLICE_78
-ROUTE         1     0.000    R14C17A.FCO to    R14C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
-FCITOFCO_D  ---     0.130    R14C17B.FCI to    R14C17B.FCO HelloWorld_inst/SLICE_77
-ROUTE         1     0.000    R14C17B.FCO to    R14C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
-FCITOFCO_D  ---     0.130    R14C17C.FCI to    R14C17C.FCO HelloWorld_inst/SLICE_76
-ROUTE         1     0.000    R14C17C.FCO to    R14C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
-FCITOF1_DE  ---     0.495    R14C17D.FCI to     R14C17D.F1 HelloWorld_inst/SLICE_75
-ROUTE         6     1.755     R14C17D.F1 to     R15C24D.B0 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[30]
-CTOF_DEL    ---     0.408     R15C24D.B0 to     R15C24D.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2029
-ROUTE         1     1.695     R15C24D.F0 to     R10C20C.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_12
-CTOF_DEL    ---     0.408     R10C20C.C1 to     R10C20C.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/SLICE_960
-ROUTE         2     0.554     R10C20C.F1 to     R10C20B.B0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_16
-CTOF_DEL    ---     0.408     R10C20B.B0 to     R10C20B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_968
-ROUTE         4     1.105     R10C20B.F0 to      R8C18C.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
-CTOF_DEL    ---     0.408      R8C18C.D1 to      R8C18C.F1 HelloWorld_inst/SLICE_1335
-ROUTE         8     0.496      R8C18C.F1 to      R8C18A.D1 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
-CTOF_DEL    ---     0.408      R8C18A.D1 to      R8C18A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1330
-ROUTE        31     1.191      R8C18A.F1 to      R8C12D.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/ahbl_req_rdy_w
-CTOF_DEL    ---     0.408      R8C12D.D1 to      R8C12D.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1331
-ROUTE         2     0.489      R8C12D.F1 to      R8C12A.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_108
-CTOF_DEL    ---     0.408      R8C12A.D1 to      R8C12A.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         2     0.489      R8C12A.F1 to      R8C12A.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/N_152
-CTOF_DEL    ---     0.408      R8C12A.D0 to      R8C12A.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_1236
-ROUTE         1     0.741      R8C12A.F0 to      R8C15C.D1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8_0_1
-CTOF_DEL    ---     0.408      R8C15C.D1 to      R8C15C.F1 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_244
-ROUTE        23     0.827      R8C15C.F1 to      R9C17C.D0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/un1_cs_ahbl_sm_8
-CTOF_DEL    ---     0.408      R9C17C.D0 to      R9C17C.F0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243
-ROUTE         1     0.000      R9C17C.F0 to     R9C17C.DI0 HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/apb_paddr_r_7[29] (to sys_clk)
+REG_DEL     ---     0.367     R15C6D.CLK to      R15C6D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103 (from sys_clk)
+ROUTE         4     2.269      R15C6D.Q0 to     R10C22A.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/decode_to_execute_PC[6]
+CTOF_DEL    ---     0.408     R10C22A.D1 to     R10C22A.F1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         1     0.761     R10C22A.F1 to     R10C22A.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/N_652
+CTOF_DEL    ---     0.408     R10C22A.A0 to     R10C22A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1284
+ROUTE         4     1.540     R10C22A.F0 to     R14C17B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/_zz_115_[6]
+CTOF_DEL    ---     0.408     R14C17B.D0 to     R14C17B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1893
+ROUTE         1     1.258     R14C17B.F0 to     R16C15D.C1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_5_0_RNO_0
+C1TOFCO_DE  ---     0.684     R16C15D.C1 to    R16C15D.FCO HelloWorld_inst/SLICE_87
+ROUTE         1     0.000    R16C15D.FCO to    R16C16A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_6
+FCITOFCO_D  ---     0.130    R16C16A.FCI to    R16C16A.FCO HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_86
+ROUTE         1     0.000    R16C16A.FCO to    R16C16B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_8
+FCITOFCO_D  ---     0.130    R16C16B.FCI to    R16C16B.FCO HelloWorld_inst/SLICE_85
+ROUTE         1     0.000    R16C16B.FCO to    R16C16C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_10
+FCITOFCO_D  ---     0.130    R16C16C.FCI to    R16C16C.FCO HelloWorld_inst/SLICE_84
+ROUTE         1     0.000    R16C16C.FCO to    R16C16D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_12
+FCITOFCO_D  ---     0.130    R16C16D.FCI to    R16C16D.FCO HelloWorld_inst/SLICE_83
+ROUTE         1     0.000    R16C16D.FCO to    R16C17A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_14
+FCITOFCO_D  ---     0.130    R16C17A.FCI to    R16C17A.FCO HelloWorld_inst/SLICE_82
+ROUTE         1     0.000    R16C17A.FCO to    R16C17B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_16
+FCITOFCO_D  ---     0.130    R16C17B.FCI to    R16C17B.FCO HelloWorld_inst/SLICE_81
+ROUTE         1     0.000    R16C17B.FCO to    R16C17C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_18
+FCITOFCO_D  ---     0.130    R16C17C.FCI to    R16C17C.FCO HelloWorld_inst/SLICE_80
+ROUTE         1     0.000    R16C17C.FCO to    R16C17D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_20
+FCITOFCO_D  ---     0.130    R16C17D.FCI to    R16C17D.FCO HelloWorld_inst/SLICE_79
+ROUTE         1     0.000    R16C17D.FCO to    R16C18A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_22
+FCITOFCO_D  ---     0.130    R16C18A.FCI to    R16C18A.FCO HelloWorld_inst/SLICE_78
+ROUTE         1     0.000    R16C18A.FCO to    R16C18B.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_24
+FCITOFCO_D  ---     0.130    R16C18B.FCI to    R16C18B.FCO HelloWorld_inst/SLICE_77
+ROUTE         1     0.000    R16C18B.FCO to    R16C18C.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_26
+FCITOFCO_D  ---     0.130    R16C18C.FCI to    R16C18C.FCO HelloWorld_inst/SLICE_76
+ROUTE         1     0.000    R16C18C.FCO to    R16C18D.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_28
+FCITOFCO_D  ---     0.130    R16C18D.FCI to    R16C18D.FCO HelloWorld_inst/SLICE_75
+ROUTE         1     0.000    R16C18D.FCO to    R16C19A.FCI HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/dBusAhbLite3_HADDR_cry_30
+FCITOF0_DE  ---     0.450    R16C19A.FCI to     R16C19A.F0 HelloWorld_inst/SLICE_74
+ROUTE         8     1.623     R16C19A.F0 to     R12C25C.B1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect[31]
+CTOF_DEL    ---     0.408     R12C25C.B1 to     R12C25C.F1 SLICE_1974
+ROUTE         1     0.479     R12C25C.F1 to     R12C24B.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_13
+CTOF_DEL    ---     0.408     R12C24B.D0 to     R12C24B.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1793
+ROUTE         2     0.918     R12C24B.F0 to     R14C25A.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_multiplexor.b_dbus/int_slv_hsel_w_17
+CTOF_DEL    ---     0.408     R14C25A.C0 to     R14C25A.F0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_979
+ROUTE         3     0.756     R14C25A.F0 to     R16C26B.D1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/int_slv_hsel_w
+CTOF_DEL    ---     0.408     R16C26B.D1 to     R16C26B.F1 HelloWorld_inst/SLICE_1393
+ROUTE         7     0.636     R16C26B.F1 to     R14C26B.C0 HelloWorld_inst/cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C26B.C0 to     R14C26B.F0 HelloWorld_inst/ahbl0_inst/lscc_ahbl_interconnect_inst/ahb_lite_bus.u_lscc_ahbl_bus/SLICE_1428
+ROUTE         9     1.254     R14C26B.F0 to     R14C20D.D1 HelloWorld_inst/ahbl0_inst_AHBL_M00_interconnect_HTRANS_interconnect[1]
+CTOF_DEL    ---     0.408     R14C20D.D1 to     R14C20D.F1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/SLICE_1069
+ROUTE        35     1.249     R14C20D.F1 to     R15C24C.D0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/mem1_req_arb_w
+CTOF_DEL    ---     0.408     R15C24C.D0 to     R15C24C.F0 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/SLICE_1832
+ROUTE        16     2.766     R15C24C.F0 to  EBR_R20C4.WEB HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b (to sys_clk)
                   --------
-                   22.393   (34.7% logic, 65.3% route), 23 logic levels.
+                   22.650   (31.5% logic, 68.5% route), 25 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_732:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_103:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to    R18C13D.CLK sys_clk
+ROUTE       999     2.000        OSC.OSC to     R15C6D.CLK sys_clk
                   --------
                     2.000   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/ahbl2apb0_inst/lscc_ahbl2apb_inst/SLICE_243:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/pmi_ram_dp_true_beM8nnnnonessdrr3212409632124096p1981df17_3_3_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     2.000        OSC.OSC to     R9C17C.CLK sys_clk
+ROUTE       999     2.133        OSC.OSC to EBR_R20C4.CLKB sys_clk
                   --------
-                    2.000   (0.0% logic, 100.0% route), 0 logic levels.
+                    2.133   (0.0% logic, 100.0% route), 0 logic levels.
 
-Report:   44.307MHz is the maximum frequency for this preference.
+Report:   44.170MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -919,7 +885,7 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "sys_clk" 38.000000 MHz ; |   38.000 MHz|   44.307 MHz|  23  
+FREQUENCY NET "sys_clk" 38.000000 MHz ; |   38.000 MHz|   44.170 MHz|  22  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -930,13 +896,16 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 4 clocks:
+Found 5 clocks:
 
-Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 984
+Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 1018
    Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi_rdata_valid_w   Source: SLICE_1217.F1
+   Clock Domain: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/SLICE_1838.F0
+      Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;   Transfers: 4
+
+   Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/SLICE_266.F1
       Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;   Transfers: 8
 
    Clock Domain: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK   Source: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/genblk2.TCK_buff.CLKO
@@ -945,7 +914,10 @@ Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 984
 Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK   Loads: 36
    No transfer within this clock domain is found
 
-Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi_rdata_valid_w   Source: SLICE_1217.F1   Loads: 6
+Clock Domain: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/SLICE_1838.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/SLICE_266.F1   Loads: 4
    No transfer within this clock domain is found
 
 Clock Domain: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK   Source: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/genblk2.TCK_buff.CLKO   Loads: 44
@@ -958,11 +930,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 2843809 paths, 1 nets, and 15992 connections (99.92% coverage)
+Constraints cover 2900481 paths, 1 nets, and 16452 connections (99.90% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Sun Jun 06 17:04:39 2021
+Mon Jun 07 17:29:54 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -991,47 +963,47 @@ Preference: FREQUENCY NET "sys_clk" 38.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 0.216ns
+Passed: The following path meets requirements by 0.143ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[32]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/RAM0  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CF4[3]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/RAM0  (to sys_clk +)
 
-   Delay:               0.347ns  (38.3% logic, 61.7% route), 2 logic levels.
+   Delay:               0.274ns  (48.5% logic, 51.5% route), 2 logic levels.
 
  Constraint Details:
 
-      0.347ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_932 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191 meets
-      0.131ns WD_HLD and
+      0.274ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling 0.131ns) by 0.216ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.143ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_932 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R6C26B.CLK to      R6C26B.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_932 (from sys_clk)
-ROUTE         5     0.214      R6C26B.Q1 to      R5C26C.A1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/debug_bus_cmd_payload_data[0]
-ZERO_DEL    ---     0.000      R5C26C.A1 to    R5C26C.WDO0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/SLICE_190
-ROUTE         1     0.000    R5C26C.WDO0 to     R5C26A.WD0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/WD0_INT (to sys_clk)
+REG_DEL     ---     0.133     R9C24D.CLK to      R9C24D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 (from sys_clk)
+ROUTE         6     0.141      R9C24D.Q1 to      R8C24C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[3]
+ZERO_DEL    ---     0.000      R8C24C.D0 to   R8C24C.WADO3 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/SLICE_192
+ROUTE         1     0.000   R8C24C.WADO3 to    R8C24A.WAD3 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/WAD3_INT (to sys_clk)
                   --------
-                    0.347   (38.3% logic, 61.7% route), 2 logic levels.
+                    0.274   (48.5% logic, 51.5% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_932:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R6C26B.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R9C24D.CLK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R5C26A.WCK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R8C24A.WCK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1047,213 +1019,216 @@ Passed: The following path meets requirements by 0.217ns
 
  Constraint Details:
 
-      0.348ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_930 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193 meets
+      0.348ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_936 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193 meets
       0.131ns WAD_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling 0.131ns) by 0.217ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_930 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_936 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R6C27C.CLK to      R6C27C.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_930 (from sys_clk)
-ROUTE        11     0.215      R6C27C.Q0 to      R5C27C.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[0]
-ZERO_DEL    ---     0.000      R5C27C.A0 to   R5C27C.WADO0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/SLICE_192
-ROUTE         2     0.000   R5C27C.WADO0 to    R5C27A.WAD0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/WAD0_INT (to sys_clk)
+REG_DEL     ---     0.133     R9C24C.CLK to      R9C24C.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_936 (from sys_clk)
+ROUTE        11     0.215      R9C24C.Q0 to      R8C24C.A0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[0]
+ZERO_DEL    ---     0.000      R8C24C.A0 to   R8C24C.WADO0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/SLICE_192
+ROUTE         2     0.000   R8C24C.WADO0 to    R8C24A.WAD0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/WAD0_INT (to sys_clk)
                   --------
                     0.348   (38.2% logic, 61.8% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_930:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_936:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R6C27C.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R9C24C.CLK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R5C27A.WCK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R8C24A.WCK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.254ns
+Passed: The following path meets requirements by 0.217ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CF4[2]  (from sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[32]  (from sys_clk +)
    Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/RAM0  (to sys_clk +)
 
-   Delay:               0.385ns  (34.5% logic, 65.5% route), 2 logic levels.
+   Delay:               0.348ns  (38.2% logic, 61.8% route), 2 logic levels.
 
  Constraint Details:
 
-      0.385ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191 meets
-      0.131ns WAD_HLD and
+      0.348ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191 meets
+      0.131ns WD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling 0.131ns) by 0.254ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.217ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R6C27A.CLK to      R6C27A.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 (from sys_clk)
-ROUTE         8     0.252      R6C27A.Q0 to      R5C26C.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[2]
-ZERO_DEL    ---     0.000      R5C26C.C0 to   R5C26C.WADO2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/SLICE_190
-ROUTE         1     0.000   R5C26C.WADO2 to    R5C26A.WAD2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/WAD2_INT (to sys_clk)
+REG_DEL     ---     0.133     R9C23B.CLK to      R9C23B.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 (from sys_clk)
+ROUTE         5     0.215      R9C23B.Q1 to      R8C23C.A1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/debug_bus_cmd_payload_data[0]
+ZERO_DEL    ---     0.000      R8C23C.A1 to    R8C23C.WDO0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/SLICE_190
+ROUTE         1     0.000    R8C23C.WDO0 to     R8C23A.WD0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/WD0_INT (to sys_clk)
                   --------
-                    0.385   (34.5% logic, 65.5% route), 2 logic levels.
+                    0.348   (38.2% logic, 61.8% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R6C27A.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R9C23B.CLK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R5C26A.WCK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R8C23A.WCK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.258ns
+Passed: The following path meets requirements by 0.235ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CF4[2]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/RAM0  (to sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/RAM0  (to sys_clk +)
 
-   Delay:               0.389ns  (34.2% logic, 65.8% route), 2 logic levels.
+   Delay:               0.366ns  (36.3% logic, 63.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.389ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193 meets
+      0.366ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191 meets
       0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling 0.131ns) by 0.258ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.235ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R6C27A.CLK to      R6C27A.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931 (from sys_clk)
-ROUTE         8     0.256      R6C27A.Q0 to      R5C27C.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[2]
-ZERO_DEL    ---     0.000      R5C27C.C0 to   R5C27C.WADO2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/SLICE_192
-ROUTE         1     0.000   R5C27C.WADO2 to    R5C27A.WAD2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/WAD2_INT (to sys_clk)
+REG_DEL     ---     0.133     R9C24D.CLK to      R9C24D.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 (from sys_clk)
+ROUTE         8     0.233      R9C24D.Q0 to      R8C23C.C0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[2]
+ZERO_DEL    ---     0.000      R8C23C.C0 to   R8C23C.WADO2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/SLICE_190
+ROUTE         1     0.000   R8C23C.WADO2 to    R8C23A.WAD2 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/WAD2_INT (to sys_clk)
                   --------
-                    0.389   (34.2% logic, 65.8% route), 2 logic levels.
+                    0.366   (36.3% logic, 63.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_931:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R6C27A.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R9C24D.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to     R8C23A.WCK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.251ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CF4[3]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/RAM0  (to sys_clk +)
+
+   Delay:               0.382ns  (34.8% logic, 65.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.382ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.251ns
+
+ Physical Path Details:
+
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R9C24D.CLK to      R9C24D.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937 (from sys_clk)
+ROUTE         6     0.249      R9C24D.Q1 to      R8C23C.D0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/tmp1[3]
+ZERO_DEL    ---     0.000      R8C23C.D0 to   R8C23C.WADO3 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/SLICE_190
+ROUTE         1     0.000   R8C23C.WADO3 to    R8C23A.WAD3 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram/WAD3_INT (to sys_clk)
+                  --------
+                    0.382   (34.8% logic, 65.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_937:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to     R9C24D.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to     R8C23A.WCK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.300ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[32]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/RAM0  (to sys_clk +)
+
+   Delay:               0.431ns  (30.9% logic, 69.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.431ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193 meets
+      0.131ns WD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.300ns
+
+ Physical Path Details:
+
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R9C23B.CLK to      R9C23B.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938 (from sys_clk)
+ROUTE         5     0.298      R9C23B.Q1 to      R8C24C.A1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/debug_bus_cmd_payload_data[0]
+ZERO_DEL    ---     0.000      R8C24C.A1 to    R8C24C.WDO0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/SLICE_192
+ROUTE         1     0.000    R8C24C.WDO0 to     R8C24A.WD0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0/WD0_INT (to sys_clk)
+                  --------
+                    0.431   (30.9% logic, 69.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/SLICE_938:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to     R9C23B.CLK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/SLICE_193:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to     R5C27A.WCK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.280ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/resetCtrl_mainClkReset  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataLoaded  (to sys_clk +)
-
-   Delay:               0.280ns  (47.5% logic, 52.5% route), 1 logic levels.
-
- Constraint Details:
-
-      0.280ns physical path delay HelloWorld_inst/cpu0_inst/SLICE_964 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_923 meets
-      0.000ns LSRREC_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling 0.000ns) by 0.280ns
-
- Physical Path Details:
-
-      Data path HelloWorld_inst/cpu0_inst/SLICE_964 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_923:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R14C26C.CLK to     R14C26C.Q0 HelloWorld_inst/cpu0_inst/SLICE_964 (from sys_clk)
-ROUTE        13     0.147     R14C26C.Q0 to    R14C26A.LSR HelloWorld_inst/cpu0_inst/riscvsmall_inst/resetCtrl_mainClkReset (to sys_clk)
-                  --------
-                    0.280   (47.5% logic, 52.5% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/SLICE_964:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R14C26C.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_923:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R14C26A.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.302ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_hadException  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_mtval[21]  (to sys_clk +)
-                   FF                        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_mtval[20]
-
-   Delay:               0.278ns  (47.8% logic, 52.2% route), 1 logic levels.
-
- Constraint Details:
-
-      0.278ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_358 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1675 meets
-     -0.024ns CE_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.024ns) by 0.302ns
-
- Physical Path Details:
-
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_358 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1675:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R15C25A.CLK to     R15C25A.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_358 (from sys_clk)
-ROUTE        23     0.145     R15C25A.Q0 to     R15C25D.CE HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_hadException (to sys_clk)
-                  --------
-                    0.278   (47.8% logic, 52.2% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_358:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R15C25A.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1675:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R15C25D.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to     R8C24A.WCK sys_clk
                   --------
                     0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1262,129 +1237,86 @@ Passed: The following path meets requirements by 0.304ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/FF_7  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/FF_5  (to sys_clk +)
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBridge_1_/flowCCByToggle_1_/bufferCC_4_/buffers_0  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBridge_1_/flowCCByToggle_1_/bufferCC_4_/buffers_1  (to sys_clk +)
 
    Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
 
  Constraint Details:
 
-      0.285ns physical path delay HelloWorld_inst/SLICE_1031 to HelloWorld_inst/SLICE_1031 meets
+      0.285ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783 meets
      -0.019ns M_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.019ns) by 0.304ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/SLICE_1031 to HelloWorld_inst/SLICE_1031:
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R22C25C.CLK to     R22C25C.Q0 HelloWorld_inst/SLICE_1031 (from sys_clk)
-ROUTE         1     0.152     R22C25C.Q0 to     R22C25C.M1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/addr010_ff (to sys_clk)
+REG_DEL     ---     0.133    R19C26C.CLK to     R19C26C.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783 (from sys_clk)
+ROUTE         1     0.152     R19C26C.Q0 to     R19C26C.M1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBridge_1_/flowCCByToggle_1_/bufferCC_4_/buffers_0 (to sys_clk)
                   --------
                     0.285   (46.7% logic, 53.3% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/SLICE_1031:
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.876        OSC.OSC to    R22C25C.CLK sys_clk
+ROUTE       999     0.894        OSC.OSC to    R19C26C.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_1783:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to    R19C26C.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[65]  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[64]  (to sys_clk +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R22C29A.CLK to     R22C29A.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093 (from sys_clk)
+ROUTE         1     0.152     R22C29A.Q1 to     R22C29A.M0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter[65] (to sys_clk)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.876        OSC.OSC to    R22C29A.CLK sys_clk
                   --------
                     0.876   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/SLICE_1031:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/SLICE_2093:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.876        OSC.OSC to    R22C25C.CLK sys_clk
+ROUTE       999     0.876        OSC.OSC to    R22C29A.CLK sys_clk
                   --------
                     0.876   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionContext_badAddr[23]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_mtval[23]  (to sys_clk +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C22C.CLK to     R16C22C.Q1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 (from sys_clk)
-ROUTE         1     0.152     R16C22C.Q1 to     R16C22D.M1 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionContext_badAddr[23] (to sys_clk)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R16C22C.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R16C22D.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionContext_badAddr[22]  (from sys_clk +)
-   Destination:    FF         Data in        HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_mtval[22]  (to sys_clk +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C22C.CLK to     R16C22C.Q0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347 (from sys_clk)
-ROUTE         1     0.152     R16C22C.Q0 to     R16C22D.M0 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionContext_badAddr[22] (to sys_clk)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_347:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R16C22C.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path OSCH_inst to HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/SLICE_1661:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.894        OSC.OSC to    R16C22D.CLK sys_clk
-                  --------
-                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
 
 Passed: The following path meets requirements by 0.304ns
@@ -1398,36 +1330,79 @@ Passed: The following path meets requirements by 0.304ns
 
  Constraint Details:
 
-      0.285ns physical path delay HelloWorld_inst/SLICE_1032 to HelloWorld_inst/SLICE_1032 meets
+      0.285ns physical path delay HelloWorld_inst/SLICE_1066 to HelloWorld_inst/SLICE_1066 meets
      -0.019ns M_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.019ns) by 0.304ns
 
  Physical Path Details:
 
-      Data path HelloWorld_inst/SLICE_1032 to HelloWorld_inst/SLICE_1032:
+      Data path HelloWorld_inst/SLICE_1066 to HelloWorld_inst/SLICE_1066:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R23C25C.CLK to     R23C25C.Q0 HelloWorld_inst/SLICE_1032 (from sys_clk)
-ROUTE         1     0.152     R23C25C.Q0 to     R23C25C.M1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/addr011_ff (to sys_clk)
+REG_DEL     ---     0.133    R21C18B.CLK to     R21C18B.Q0 HelloWorld_inst/SLICE_1066 (from sys_clk)
+ROUTE         1     0.152     R21C18B.Q0 to     R21C18B.M1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/addr011_ff (to sys_clk)
                   --------
                     0.285   (46.7% logic, 53.3% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path OSCH_inst to HelloWorld_inst/SLICE_1032:
+      Source Clock Path OSCH_inst to HelloWorld_inst/SLICE_1066:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.876        OSC.OSC to    R23C25C.CLK sys_clk
+ROUTE       999     0.876        OSC.OSC to    R21C18B.CLK sys_clk
                   --------
                     0.876   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path OSCH_inst to HelloWorld_inst/SLICE_1032:
+      Destination Clock Path OSCH_inst to HelloWorld_inst/SLICE_1066:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       984     0.876        OSC.OSC to    R23C25C.CLK sys_clk
+ROUTE       999     0.876        OSC.OSC to    R21C18B.CLK sys_clk
                   --------
                     0.876   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/FF_7  (from sys_clk +)
+   Destination:    FF         Data in        HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/FF_5  (to sys_clk +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay HelloWorld_inst/SLICE_1065 to HelloWorld_inst/SLICE_1065 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path HelloWorld_inst/SLICE_1065 to HelloWorld_inst/SLICE_1065:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C10C.CLK to     R19C10C.Q0 HelloWorld_inst/SLICE_1065 (from sys_clk)
+ROUTE         1     0.152     R19C10C.Q0 to     R19C10C.M1 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/addr010_ff (to sys_clk)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCH_inst to HelloWorld_inst/SLICE_1065:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to    R19C10C.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCH_inst to HelloWorld_inst/SLICE_1065:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.894        OSC.OSC to    R19C10C.CLK sys_clk
+                  --------
+                    0.894   (0.0% logic, 100.0% route), 0 logic levels.
 
 Report Summary
 --------------
@@ -1435,7 +1410,7 @@ Report Summary
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "sys_clk" 38.000000 MHz ; |     0.000 ns|     0.216 ns|   2  
+FREQUENCY NET "sys_clk" 38.000000 MHz ; |     0.000 ns|     0.143 ns|   2  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1446,13 +1421,16 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 4 clocks:
+Found 5 clocks:
 
-Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 984
+Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 1018
    Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi_rdata_valid_w   Source: SLICE_1217.F1
+   Clock Domain: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/SLICE_1838.F0
+      Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;   Transfers: 4
+
+   Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/SLICE_266.F1
       Covered under: FREQUENCY NET "sys_clk" 38.000000 MHz ;   Transfers: 8
 
    Clock Domain: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK   Source: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/genblk2.TCK_buff.CLKO
@@ -1461,7 +1439,10 @@ Clock Domain: sys_clk   Source: OSCH_inst.OSC   Loads: 984
 Clock Domain: jtaghub16_jtck   Source: xo2chub/genblk7.jtagf_u.JTCK   Loads: 36
    No transfer within this clock domain is found
 
-Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/lmmi_rdata_valid_w   Source: SLICE_1217.F1   Loads: 6
+Clock Domain: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio1_inst/lscc_gpio_inst/SLICE_1838.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/lmmi_rdata_valid_w   Source: HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/SLICE_266.F1   Loads: 4
    No transfer within this clock domain is found
 
 Clock Domain: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK   Source: HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/genblk2.TCK_buff.CLKO   Loads: 44
@@ -1474,7 +1455,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 2843809 paths, 1 nets, and 15992 connections (99.92% coverage)
+Constraints cover 2900481 paths, 1 nets, and 16452 connections (99.90% coverage)
 
 
 

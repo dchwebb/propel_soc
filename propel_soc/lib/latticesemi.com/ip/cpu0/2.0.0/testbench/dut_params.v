@@ -11,7 +11,9 @@ localparam C_EXT = 1;
 localparam PIC_ENABLE = 1;
 localparam TIMER_ENABLE = 1;
 localparam PICTIMER_START_ADDR = 32'hFFFF0000;
-localparam IRQ_NUM = 2;
-localparam DEVICE = "MachXO3L";
+localparam IRQ_NUM = 3;
+localparam DEVICE = "MachXO3LF";
 localparam JTAG_CHANNEL = 14;
-`define MACHXO3L
+`define MachXO3LF
+`define xo3c00f
+`define LCMXO3LF-6900C

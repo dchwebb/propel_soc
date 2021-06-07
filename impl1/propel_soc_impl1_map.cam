@@ -1,8 +1,13 @@
 [ START MERGED ]
 HelloWorld_inst.cpu0_inst_system_resetn_o_net_i HelloWorld_inst/cpu0_inst_system_resetn_o_net
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state_i[0] HelloWorld_inst/uart0_inst/lscc_uart_inst/u_txmitt/tx_state[0]
-HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/wren0_inv_g HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/un3_mem_request_o_i_a3_i
+HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/wren0_inv_g HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/N_222_i
 HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/ecp_5.dp.ram_dp_true_be.u_mem/wren1_inv HelloWorld_inst/sysmem0_inst/lscc_sys_mem_inst/u_lscc_mem0/dp_wr_b
+HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_cs_i[1] HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_cs[1]
+HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[0] HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[0]
+HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[3] HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[3]
+HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[2] HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[2]
+HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[1] HelloWorld_inst/gpio1_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[1]
 HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_cs_i[1] HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk2.lscc_apb2lmmi_0/bus_sm_cs[1]
 HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[5] HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[5]
 HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[0] HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[0]
@@ -14,16 +19,16 @@ HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i
 HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r_i[6] HelloWorld_inst/gpio0_inst/lscc_gpio_inst/genblk1.lscc_gpio_lmmi_0/direction_r[6]
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionValidsRegs_writeBack_i HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/CsrPlugin_exceptionPortCtrl_exceptionValidsRegs_writeBack
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/jtagBridge_1_/CN HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/TCK
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TMS_reg/RST_i jtaghub16_jrstn
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TDI_reg/RST_i jtaghub16_jrstn
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TDI_reg2/RST_i jtaghub16_jrstn
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TCK_counter_reg/RST_i jtaghub16_jrstn
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/system_resetn_o_i HelloWorld_inst/cpu0_inst_system_resetn_o_net
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/bscan_DRCK_i_0 jtaghub16_jtck
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/shift_delay_reg/RST_i jtaghub16_jrstn
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/shift_delay2_reg/RST_i jtaghub16_jrstn
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/jce_delay_reg/RST_i jtaghub16_jrstn
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/jce_delay2_reg/RST_i jtaghub16_jrstn
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TMS_reg/RST_i jtaghub16_jrstn
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TDI_reg/RST_i jtaghub16_jrstn
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TDI_reg2/RST_i jtaghub16_jrstn
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/vex_jtag_bridge_i/TCK_counter_reg/RST_i jtaghub16_jrstn
 xo2chub/cdn.CN jtaghub16_jtck
 xo2chub/jrstn_i jtaghub16_jrstn
 [ END MERGED ]
@@ -96,7 +101,7 @@ HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_reg_s_0_S1
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_reg_s_0_COUT[63]
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_0_0_S1
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_0_0_S0
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_16
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_2
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_1_0_S1
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_1_0_S0
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_3_0_S1
@@ -162,7 +167,7 @@ HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_63_0_S0
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/un1_cnt_reg_2_cry_63_0_COUT
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/cnt_reg_cry_0_S0[0]
-HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_15
+HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk_timer.i_timer_32/N_1
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0_DO2
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0_DO3
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.vex_debug/systemDebugger_1_/dispatcher_dataShifter_CR0_ram_0_DO1
@@ -260,24 +265,24 @@ HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_BranchP
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_BranchPlugin_eq_0_I_81_0_S0
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_BranchPlugin_eq_0_I_45_0_S0
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/execute_BranchPlugin_eq_0_I_45_0_COUT
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[30]
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[23]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[27]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[14]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[15]
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[16]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[17]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[18]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[19]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[20]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[21]
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[22]
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[24]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[25]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[26]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[28]
-HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[31]
 HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[29]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[16]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[31]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[24]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[22]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[23]
+HelloWorld_inst/cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect[30]
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimplePlugin_fetchPc_pc_7_axb_28
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimplePlugin_fetchPc_pc_7_axb_27
 HelloWorld_inst/cpu0_inst/riscvsmall_inst/genblk7.i_Riscv_Dbg_IC/IBusSimplePlugin_fetchPc_pc_7_axb_26
@@ -383,7 +388,7 @@ HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_cry_0_S0[0]
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_6
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_s_0_S1[15]
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_s_0_COUT[15]
-HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_425_i
+HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_eq_div_2_0_I_1_0_S1
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_eq_div_2_0_I_1_0_S0
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/N_7
 HelloWorld_inst/uart0_inst/lscc_uart_inst/u_rxcver/counter_eq_div_2_0_I_9_0_S1
@@ -405,18 +410,22 @@ sys_clk 38.00
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Sun Jun 06 17:04:10 2021
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Mon Jun 07 17:29:26 2021
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "txd_o" SITE "C11" ;
 LOCATE COMP "rstn_i" SITE "B3" ;
+LOCATE COMP "gpio1_io[0]" SITE "N2" ;
+LOCATE COMP "gpio1_io[3]" SITE "N1" ;
+LOCATE COMP "gpio1_io[2]" SITE "M3" ;
+LOCATE COMP "gpio1_io[1]" SITE "P1" ;
 LOCATE COMP "led_o[5]" SITE "L13" ;
 LOCATE COMP "led_o[0]" SITE "H11" ;
 LOCATE COMP "led_o[3]" SITE "L12" ;
 LOCATE COMP "led_o[2]" SITE "J11" ;
 LOCATE COMP "led_o[1]" SITE "J13" ;
 LOCATE COMP "led_o[4]" SITE "K11" ;
-LOCATE COMP "led_o[7]" SITE "B16" ;
+LOCATE COMP "led_o[7]" SITE "P16" ;
 LOCATE COMP "led_o[6]" SITE "N15" ;
 LOCATE COMP "rxd_i" SITE "A11" ;
 FREQUENCY NET "sys_clk" 38.000000 MHz ;

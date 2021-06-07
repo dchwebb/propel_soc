@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version Q-2020.03L-SP1
 #--  Project file D:\docs\FPGA\propel_soc\impl1\run_options.txt
-#--  Written on Sat Jun  5 14:30:32 2021
+#--  Written on Mon Jun  7 17:14:53 2021
 
 
 #project files

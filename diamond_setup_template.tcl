@@ -8,7 +8,7 @@ set DEVICE "LCMXO3LF-6900C-6BG256C"
 
 set DESIGN "propel_soc"
 
-set LPF_FILE ""
+set LPF_FILE "D:/docs/FPGA/propel_soc/propel_soc.lpf"
 
 array set VFILE_LIST ""
 set VFILE_LIST(1) "D:/docs/FPGA/propel_soc/propel_soc/propel_soc_Top.v"

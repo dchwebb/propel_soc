@@ -52,6 +52,7 @@
 `include "./lib/latticesemi.com/ip/cpu0/2.0.0/rtl/cpu0.v"
 `endif
 `include "./lib/latticesemi.com/ip/gpio0/1.4.1/rtl/gpio0.v"
+`include "./lib/latticesemi.com/ip/gpio1/1.4.0/rtl/gpio1.v"
 `include "./lib/latticesemi.com/ip/sysmem0/1.0.2/rtl/sysmem0.v"
 `include "./lib/latticesemi.com/ip/uart0/1.2.0/rtl/uart0.v"
 `include "./lib/latticesemi.com/module/ahbl0/1.1.4/rtl/ahbl0.v"
@@ -62,8 +63,9 @@
 //
 // Verific Verilog Description of module propel_soc
 //
-module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module=true */ ;
+module propel_soc (gpio_io, gpio1_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module=true */ ;
     inout [7:0]gpio_io;
+    inout [3:0]gpio1_io;
     input clk_i;
     input rstn_i;
     input rxd_i;
@@ -107,29 +109,36 @@ module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module
     wire ahbl2apb0_inst_APB_M0_interconnect_PENABLE_interconnect, ahbl2apb0_inst_APB_M0_interconnect_PREADY_interconnect, 
         ahbl2apb0_inst_APB_M0_interconnect_PSELx_interconnect, ahbl2apb0_inst_APB_M0_interconnect_PSLVERR_interconnect, 
         ahbl2apb0_inst_APB_M0_interconnect_PWRITE_interconnect;
-    wire [31:0]apb0_inst_APB_M00_interconnect_PADDR_interconnect;
-    wire [31:0]apb0_inst_APB_M00_interconnect_PRDATA_interconnect;
-    wire [31:0]apb0_inst_APB_M00_interconnect_PWDATA_interconnect;
-    wire [31:0]apb0_inst_APB_M01_interconnect_PADDR_interconnect;
+    wire [31:0]apb0_inst_APB_M02_interconnect_PRDATA_interconnect;
+    wire [31:0]apb0_inst_APB_M02_interconnect_PADDR_interconnect;
+    wire [31:0]apb0_inst_APB_M02_interconnect_PWDATA_interconnect;
     wire [31:0]apb0_inst_APB_M01_interconnect_PRDATA_interconnect;
+    wire [31:0]apb0_inst_APB_M01_interconnect_PADDR_interconnect;
     wire [31:0]apb0_inst_APB_M01_interconnect_PWDATA_interconnect;
+    wire [31:0]apb0_inst_APB_M00_interconnect_PRDATA_interconnect;
+    wire [31:0]apb0_inst_APB_M00_interconnect_PADDR_interconnect;
+    wire [31:0]apb0_inst_APB_M00_interconnect_PWDATA_interconnect;
     
-    wire apb0_inst_APB_M00_interconnect_PENABLE_interconnect, apb0_inst_APB_M00_interconnect_PREADY_interconnect, 
-        apb0_inst_APB_M00_interconnect_PSELx_interconnect, apb0_inst_APB_M00_interconnect_PSLVERR_interconnect, 
-        apb0_inst_APB_M00_interconnect_PWRITE_interconnect, apb0_inst_APB_M01_interconnect_PENABLE_interconnect, 
-        apb0_inst_APB_M01_interconnect_PREADY_interconnect, apb0_inst_APB_M01_interconnect_PSELx_interconnect, 
-        apb0_inst_APB_M01_interconnect_PSLVERR_interconnect, apb0_inst_APB_M01_interconnect_PWRITE_interconnect;
+    wire apb0_inst_APB_M02_interconnect_PREADY_interconnect, apb0_inst_APB_M02_interconnect_PSLVERR_interconnect, 
+        apb0_inst_APB_M02_interconnect_PSELx_interconnect, apb0_inst_APB_M02_interconnect_PWRITE_interconnect, 
+        apb0_inst_APB_M02_interconnect_PENABLE_interconnect, apb0_inst_APB_M01_interconnect_PREADY_interconnect, 
+        apb0_inst_APB_M01_interconnect_PSLVERR_interconnect, apb0_inst_APB_M01_interconnect_PSELx_interconnect, 
+        apb0_inst_APB_M01_interconnect_PWRITE_interconnect, apb0_inst_APB_M01_interconnect_PENABLE_interconnect, 
+        apb0_inst_APB_M00_interconnect_PREADY_interconnect, apb0_inst_APB_M00_interconnect_PSLVERR_interconnect, 
+        apb0_inst_APB_M00_interconnect_PSELx_interconnect, apb0_inst_APB_M00_interconnect_PWRITE_interconnect, 
+        apb0_inst_APB_M00_interconnect_PENABLE_interconnect;
     wire [31:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect;
+    wire [2:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HSIZE_interconnect;
     wire [2:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HBURST_interconnect;
     wire [3:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HPROT_interconnect;
-    wire [31:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA_interconnect;
-    wire [2:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HSIZE_interconnect;
     wire [1:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HTRANS_interconnect;
     wire [31:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HWDATA_interconnect;
+    wire [31:0]cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA_interconnect;
     
-    wire cpu0_inst_AHBL_M0_INSTR_interconnect_HMASTLOCK_interconnect, cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT_interconnect, 
-        cpu0_inst_AHBL_M0_INSTR_interconnect_HRESP_interconnect, cpu0_inst_AHBL_M0_INSTR_interconnect_HWRITE_interconnect, 
-        uart0_inst_INT_M0_interconnect_IRQ_interconnect, gpio0_inst_INTR_interconnect_IRQ_interconnect;
+    wire gpio1_inst_INTR_interconnect_IRQ_interconnect, gpio0_inst_INTR_interconnect_IRQ_interconnect, 
+        uart0_inst_INT_M0_interconnect_IRQ_interconnect, cpu0_inst_AHBL_M0_INSTR_interconnect_HWRITE_interconnect, 
+        cpu0_inst_AHBL_M0_INSTR_interconnect_HMASTLOCK_interconnect, cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT_interconnect, 
+        cpu0_inst_AHBL_M0_INSTR_interconnect_HRESP_interconnect;
     
     ahbl0 ahbl0_inst (.ahbl_m00_haddr_mstr_o({ahbl0_inst_AHBL_M00_interconnect_HADDR_interconnect}), 
           .ahbl_m00_hburst_mstr_o({ahbl0_inst_AHBL_M00_interconnect_HBURST_interconnect}), 
@@ -1199,7 +1208,7 @@ module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module
     defparam ahbl0_inst.S0_ADDR_RANGE = 32'h00004000;
     defparam ahbl0_inst.S0_BASE_ADDR = 32'h00000000;
     defparam ahbl0_inst.S0_FRAGMENT_EN = 1;
-    defparam ahbl0_inst.S1_ADDR_RANGE = 32'h00000800;
+    defparam ahbl0_inst.S1_ADDR_RANGE = 32'h00000C00;
     defparam ahbl0_inst.S1_BASE_ADDR = 32'h00008000;
     defparam ahbl0_inst.S1_FRAGMENT_EN = 1;
     ahbl2apb0 ahbl2apb0_inst (.ahbl_haddr_i({ahbl0_inst_AHBL_M01_interconnect_HADDR_interconnect}), 
@@ -1225,62 +1234,71 @@ module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module
             .apb_pwrite_o(ahbl2apb0_inst_APB_M0_interconnect_PWRITE_interconnect), 
             .clk_i(clk_i), .rst_n_i(cpu0_inst_system_resetn_o_net));
     defparam ahbl2apb0_inst.ADDR_WIDTH = 32;
-    apb0 apb0_inst (.apb_m00_paddr_mstr_o({apb0_inst_APB_M00_interconnect_PADDR_interconnect}), 
-         .apb_m00_prdata_mstr_i({apb0_inst_APB_M00_interconnect_PRDATA_interconnect}), 
-         .apb_m00_pwdata_mstr_o({apb0_inst_APB_M00_interconnect_PWDATA_interconnect}), 
-         .apb_m01_paddr_mstr_o({apb0_inst_APB_M01_interconnect_PADDR_interconnect}), 
+    apb0 apb0_inst (.apb_m02_prdata_mstr_i({apb0_inst_APB_M02_interconnect_PRDATA_interconnect}), 
+         .apb_m02_paddr_mstr_o({apb0_inst_APB_M02_interconnect_PADDR_interconnect}), 
+         .apb_m02_pwdata_mstr_o({apb0_inst_APB_M02_interconnect_PWDATA_interconnect}), 
          .apb_m01_prdata_mstr_i({apb0_inst_APB_M01_interconnect_PRDATA_interconnect}), 
+         .apb_m01_paddr_mstr_o({apb0_inst_APB_M01_interconnect_PADDR_interconnect}), 
          .apb_m01_pwdata_mstr_o({apb0_inst_APB_M01_interconnect_PWDATA_interconnect}), 
          .apb_s00_paddr_slv_i({ahbl2apb0_inst_APB_M0_interconnect_PADDR_interconnect}), 
-         .apb_s00_prdata_slv_o({ahbl2apb0_inst_APB_M0_interconnect_PRDATA_interconnect}), 
          .apb_s00_pwdata_slv_i({ahbl2apb0_inst_APB_M0_interconnect_PWDATA_interconnect}), 
-         .apb_m00_penable_mstr_o(apb0_inst_APB_M00_interconnect_PENABLE_interconnect), 
-         .apb_m00_pready_mstr_i(apb0_inst_APB_M00_interconnect_PREADY_interconnect), 
-         .apb_m00_psel_mstr_o(apb0_inst_APB_M00_interconnect_PSELx_interconnect), 
-         .apb_m00_pslverr_mstr_i(apb0_inst_APB_M00_interconnect_PSLVERR_interconnect), 
-         .apb_m00_pwrite_mstr_o(apb0_inst_APB_M00_interconnect_PWRITE_interconnect), 
-         .apb_m01_penable_mstr_o(apb0_inst_APB_M01_interconnect_PENABLE_interconnect), 
-         .apb_m01_pready_mstr_i(apb0_inst_APB_M01_interconnect_PREADY_interconnect), 
-         .apb_m01_psel_mstr_o(apb0_inst_APB_M01_interconnect_PSELx_interconnect), 
-         .apb_m01_pslverr_mstr_i(apb0_inst_APB_M01_interconnect_PSLVERR_interconnect), 
-         .apb_m01_pwrite_mstr_o(apb0_inst_APB_M01_interconnect_PWRITE_interconnect), 
+         .apb_s00_prdata_slv_o({ahbl2apb0_inst_APB_M0_interconnect_PRDATA_interconnect}), 
+         .apb_m00_prdata_mstr_i({apb0_inst_APB_M00_interconnect_PRDATA_interconnect}), 
+         .apb_m00_paddr_mstr_o({apb0_inst_APB_M00_interconnect_PADDR_interconnect}), 
+         .apb_m00_pwdata_mstr_o({apb0_inst_APB_M00_interconnect_PWDATA_interconnect}), 
          .apb_pclk_i(clk_i), .apb_presetn_i(cpu0_inst_system_resetn_o_net), 
+         .apb_m02_pready_mstr_i(apb0_inst_APB_M02_interconnect_PREADY_interconnect), 
+         .apb_m02_pslverr_mstr_i(apb0_inst_APB_M02_interconnect_PSLVERR_interconnect), 
+         .apb_m02_psel_mstr_o(apb0_inst_APB_M02_interconnect_PSELx_interconnect), 
+         .apb_m02_pwrite_mstr_o(apb0_inst_APB_M02_interconnect_PWRITE_interconnect), 
+         .apb_m02_penable_mstr_o(apb0_inst_APB_M02_interconnect_PENABLE_interconnect), 
+         .apb_m01_pready_mstr_i(apb0_inst_APB_M01_interconnect_PREADY_interconnect), 
+         .apb_m01_pslverr_mstr_i(apb0_inst_APB_M01_interconnect_PSLVERR_interconnect), 
+         .apb_m01_psel_mstr_o(apb0_inst_APB_M01_interconnect_PSELx_interconnect), 
+         .apb_m01_pwrite_mstr_o(apb0_inst_APB_M01_interconnect_PWRITE_interconnect), 
+         .apb_m01_penable_mstr_o(apb0_inst_APB_M01_interconnect_PENABLE_interconnect), 
+         .apb_s00_psel_slv_i(ahbl2apb0_inst_APB_M0_interconnect_PSELx_interconnect), 
+         .apb_s00_pwrite_slv_i(ahbl2apb0_inst_APB_M0_interconnect_PWRITE_interconnect), 
          .apb_s00_penable_slv_i(ahbl2apb0_inst_APB_M0_interconnect_PENABLE_interconnect), 
          .apb_s00_pready_slv_o(ahbl2apb0_inst_APB_M0_interconnect_PREADY_interconnect), 
-         .apb_s00_psel_slv_i(ahbl2apb0_inst_APB_M0_interconnect_PSELx_interconnect), 
          .apb_s00_pslverr_slv_o(ahbl2apb0_inst_APB_M0_interconnect_PSLVERR_interconnect), 
-         .apb_s00_pwrite_slv_i(ahbl2apb0_inst_APB_M0_interconnect_PWRITE_interconnect));
+         .apb_m00_pready_mstr_i(apb0_inst_APB_M00_interconnect_PREADY_interconnect), 
+         .apb_m00_pslverr_mstr_i(apb0_inst_APB_M00_interconnect_PSLVERR_interconnect), 
+         .apb_m00_psel_mstr_o(apb0_inst_APB_M00_interconnect_PSELx_interconnect), 
+         .apb_m00_pwrite_mstr_o(apb0_inst_APB_M00_interconnect_PWRITE_interconnect), 
+         .apb_m00_penable_mstr_o(apb0_inst_APB_M00_interconnect_PENABLE_interconnect));
     defparam apb0_inst.FULL_DECODE_EN = 1;
     defparam apb0_inst.M_ADDR_WIDTH = 32;
     defparam apb0_inst.S0_ADDR_RANGE = 32'h00000400;
     defparam apb0_inst.S0_BASE_ADDR = 32'h00008400;
     defparam apb0_inst.S1_ADDR_RANGE = 32'h00000400;
     defparam apb0_inst.S1_BASE_ADDR = 32'h00008000;
-    cpu0 cpu0_inst (.ahbl_m_data_haddr_o({cpu0_inst_AHBL_M1_DATA_interconnect_HADDR_interconnect}), 
-         .ahbl_m_data_hburst_o({cpu0_inst_AHBL_M1_DATA_interconnect_HBURST_interconnect}), 
-         .ahbl_m_data_hprot_o({cpu0_inst_AHBL_M1_DATA_interconnect_HPROT_interconnect}), 
-         .ahbl_m_data_hrdata_i({cpu0_inst_AHBL_M1_DATA_interconnect_HRDATA_interconnect}), 
-         .ahbl_m_data_hsize_o({cpu0_inst_AHBL_M1_DATA_interconnect_HSIZE_interconnect}), 
-         .ahbl_m_data_htrans_o({cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect}), 
-         .ahbl_m_data_hwdata_o({cpu0_inst_AHBL_M1_DATA_interconnect_HWDATA_interconnect}), 
-         .ahbl_m_instr_haddr_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect}), 
+    defparam apb0_inst.S2_ADDR_RANGE = 32'h00000400;
+    defparam apb0_inst.S2_BASE_ADDR = 32'h00008800;
+    cpu0 cpu0_inst (.ahbl_m_instr_haddr_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect}), 
+         .ahbl_m_instr_hsize_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HSIZE_interconnect}), 
          .ahbl_m_instr_hburst_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HBURST_interconnect}), 
          .ahbl_m_instr_hprot_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HPROT_interconnect}), 
-         .ahbl_m_instr_hrdata_i({cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA_interconnect}), 
-         .ahbl_m_instr_hsize_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HSIZE_interconnect}), 
          .ahbl_m_instr_htrans_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HTRANS_interconnect}), 
          .ahbl_m_instr_hwdata_o({cpu0_inst_AHBL_M0_INSTR_interconnect_HWDATA_interconnect}), 
-         .ahbl_m_data_hmastlock_o(cpu0_inst_AHBL_M1_DATA_interconnect_HMASTLOCK_interconnect), 
-         .ahbl_m_data_hready_i(cpu0_inst_AHBL_M1_DATA_interconnect_HREADYOUT_interconnect), 
-         .ahbl_m_data_hresp_i(cpu0_inst_AHBL_M1_DATA_interconnect_HRESP_interconnect), 
-         .ahbl_m_data_hwrite_o(cpu0_inst_AHBL_M1_DATA_interconnect_HWRITE_interconnect), 
+         .ahbl_m_instr_hrdata_i({cpu0_inst_AHBL_M0_INSTR_interconnect_HRDATA_interconnect}), 
+         .ahbl_m_data_haddr_o({cpu0_inst_AHBL_M1_DATA_interconnect_HADDR_interconnect}), 
+         .ahbl_m_data_hsize_o({cpu0_inst_AHBL_M1_DATA_interconnect_HSIZE_interconnect}), 
+         .ahbl_m_data_hburst_o({cpu0_inst_AHBL_M1_DATA_interconnect_HBURST_interconnect}), 
+         .ahbl_m_data_hprot_o({cpu0_inst_AHBL_M1_DATA_interconnect_HPROT_interconnect}), 
+         .ahbl_m_data_htrans_o({cpu0_inst_AHBL_M1_DATA_interconnect_HTRANS_interconnect}), 
+         .ahbl_m_data_hwdata_o({cpu0_inst_AHBL_M1_DATA_interconnect_HWDATA_interconnect}), 
+         .ahbl_m_data_hrdata_i({cpu0_inst_AHBL_M1_DATA_interconnect_HRDATA_interconnect}), 
+         .clk_i(clk_i), .rst_n_i(rstn_i), .system_resetn_o(cpu0_inst_system_resetn_o_net), 
+         .irq2_i(gpio1_inst_INTR_interconnect_IRQ_interconnect), .irq1_i(gpio0_inst_INTR_interconnect_IRQ_interconnect), 
+         .irq0_i(uart0_inst_INT_M0_interconnect_IRQ_interconnect), .ahbl_m_instr_hwrite_o(cpu0_inst_AHBL_M0_INSTR_interconnect_HWRITE_interconnect), 
          .ahbl_m_instr_hmastlock_o(cpu0_inst_AHBL_M0_INSTR_interconnect_HMASTLOCK_interconnect), 
          .ahbl_m_instr_hready_i(cpu0_inst_AHBL_M0_INSTR_interconnect_HREADYOUT_interconnect), 
          .ahbl_m_instr_hresp_i(cpu0_inst_AHBL_M0_INSTR_interconnect_HRESP_interconnect), 
-         .ahbl_m_instr_hwrite_o(cpu0_inst_AHBL_M0_INSTR_interconnect_HWRITE_interconnect), 
-         .clk_i(clk_i), .irq0_i(uart0_inst_INT_M0_interconnect_IRQ_interconnect), 
-         .irq1_i(gpio0_inst_INTR_interconnect_IRQ_interconnect), .rst_n_i(rstn_i), 
-         .system_resetn_o(cpu0_inst_system_resetn_o_net));
+         .ahbl_m_data_hwrite_o(cpu0_inst_AHBL_M1_DATA_interconnect_HWRITE_interconnect), 
+         .ahbl_m_data_hmastlock_o(cpu0_inst_AHBL_M1_DATA_interconnect_HMASTLOCK_interconnect), 
+         .ahbl_m_data_hready_i(cpu0_inst_AHBL_M1_DATA_interconnect_HREADYOUT_interconnect), 
+         .ahbl_m_data_hresp_i(cpu0_inst_AHBL_M1_DATA_interconnect_HRESP_interconnect));
     defparam cpu0_inst.DCACHE_ENABLE = 0;
     defparam cpu0_inst.DCACHE_RANGE_HIGH = 32'h00000000;
     defparam cpu0_inst.DCACHE_RANGE_LOW = 32'hFFFFFFFFF;
@@ -1298,6 +1316,15 @@ module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module
           .apb_pwrite_i(apb0_inst_APB_M01_interconnect_PWRITE_interconnect), 
           .clk_i(clk_i), .int_o(gpio0_inst_INTR_interconnect_IRQ_interconnect), 
           .resetn_i(cpu0_inst_system_resetn_o_net));
+    gpio1 gpio1_inst (.gpio_io({gpio1_io}), .apb_paddr_i({apb0_inst_APB_M02_interconnect_PADDR_interconnect[5:0]}), 
+          .apb_pwdata_i({apb0_inst_APB_M02_interconnect_PWDATA_interconnect}), 
+          .apb_prdata_o({apb0_inst_APB_M02_interconnect_PRDATA_interconnect}), 
+          .clk_i(clk_i), .resetn_i(cpu0_inst_system_resetn_o_net), .apb_penable_i(apb0_inst_APB_M02_interconnect_PENABLE_interconnect), 
+          .apb_psel_i(apb0_inst_APB_M02_interconnect_PSELx_interconnect), 
+          .apb_pwrite_i(apb0_inst_APB_M02_interconnect_PWRITE_interconnect), 
+          .apb_pslverr_o(apb0_inst_APB_M02_interconnect_PSLVERR_interconnect), 
+          .apb_pready_o(apb0_inst_APB_M02_interconnect_PREADY_interconnect), 
+          .int_o(gpio1_inst_INTR_interconnect_IRQ_interconnect));
     sysmem0 sysmem0_inst (.ahbl_s0_haddr_i({cpu0_inst_AHBL_M0_INSTR_interconnect_HADDR_interconnect}), 
             .ahbl_s0_hburst_i({cpu0_inst_AHBL_M0_INSTR_interconnect_HBURST_interconnect}), 
             .ahbl_s0_hprot_i({cpu0_inst_AHBL_M0_INSTR_interconnect_HPROT_interconnect}), 
@@ -1326,14 +1353,15 @@ module propel_soc (gpio_io, clk_i, rstn_i, rxd_i, txd_o) /* synthesis sbp_module
             .ahbl_s1_hwrite_i(ahbl0_inst_AHBL_M00_interconnect_HWRITE_interconnect));
     defparam sysmem0_inst.MEM_ID = "1.0.2";
     uart0 uart0_inst (.apb_paddr_i({apb0_inst_APB_M00_interconnect_PADDR_interconnect[5:0]}), 
-          .apb_pwdata_i({apb0_inst_APB_M00_interconnect_PWDATA_interconnect}), 
           .apb_prdata_o({apb0_inst_APB_M00_interconnect_PRDATA_interconnect}), 
-          .rxd_i(rxd_i), .txd_o(txd_o), .clk_i(clk_i), .rst_n_i(cpu0_inst_system_resetn_o_net), 
-          .int_o(uart0_inst_INT_M0_interconnect_IRQ_interconnect), .apb_penable_i(apb0_inst_APB_M00_interconnect_PENABLE_interconnect), 
-          .apb_psel_i(apb0_inst_APB_M00_interconnect_PSELx_interconnect), 
-          .apb_pwrite_i(apb0_inst_APB_M00_interconnect_PWRITE_interconnect), 
+          .apb_pwdata_i({apb0_inst_APB_M00_interconnect_PWDATA_interconnect}), 
+          .apb_penable_i(apb0_inst_APB_M00_interconnect_PENABLE_interconnect), 
           .apb_pready_o(apb0_inst_APB_M00_interconnect_PREADY_interconnect), 
-          .apb_pslverr_o(apb0_inst_APB_M00_interconnect_PSLVERR_interconnect));
+          .apb_psel_i(apb0_inst_APB_M00_interconnect_PSELx_interconnect), 
+          .apb_pslverr_o(apb0_inst_APB_M00_interconnect_PSLVERR_interconnect), 
+          .apb_pwrite_i(apb0_inst_APB_M00_interconnect_PWRITE_interconnect), 
+          .clk_i(clk_i), .int_o(uart0_inst_INT_M0_interconnect_IRQ_interconnect), 
+          .rst_n_i(cpu0_inst_system_resetn_o_net), .rxd_i(rxd_i), .txd_o(txd_o));
     
 endmodule
 

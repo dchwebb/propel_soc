@@ -44,7 +44,8 @@ module HelloWorld_Top (
 	input  rstn_i,
 	input  rxd_i,
 	output txd_o,
-	inout [7:0] led_o
+	inout [7:0] led_o,
+	inout [3:0] gpio1_io
 );
 
 GSR GSR_INST(.GSR(rstn_i));
@@ -57,7 +58,8 @@ propel_soc HelloWorld_inst (
 	.rstn_i(rstn_i),
 	.rxd_i(rxd_i),
 	.txd_o(txd_o),
-	.gpio_io(led_o)
+	.gpio_io(led_o),
+	.gpio1_io(gpio1_io)
 );
 
 endmodule
