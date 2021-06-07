@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="MachXO3L" date="2021 03 26 11:28:26" device="LCMXO3L-9400C" generator="ipgen" library="ip" module="uart" name="uart0" package="CABGA256" source_format="Verilog" speed="5" vendor="latticesemi.com" version="1.1.1">
+ <Package>
+  <File modified="2021 03 26 11:28:26" name="rtl/uart0_bb.v" type="black_box_verilog"/>
+  <File modified="2021 03 26 11:28:26" name="uart0.cfg" type="cfg"/>
+  <File modified="2021 03 26 11:28:26" name="misc/uart0_tmpl.v" type="template_verilog"/>
+  <File modified="2021 03 26 11:28:26" name="misc/uart0_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2021 03 26 11:28:26" name="rtl/uart0.v" type="top_level_verilog"/>
+  <File modified="2021 03 26 11:28:26" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2021 03 26 11:28:26" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2021 03 26 11:28:26" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2021 03 26 11:28:26" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/lscc_lmmi2apb.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/lscc_uart_model.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/tb_lmmi_mst.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/tb_top.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/uart_rx.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="testbench/uart_tx.v" type="testbench_verilog"/>
+  <File modified="2021 02 09 07:13:57" name="driver/uart.c" type="driver_source"/>
+  <File modified="2021 02 09 07:13:57" name="driver/uart.h" type="driver_header"/>
+  <File modified="2021 02 09 07:13:57" name="driver/uart.xml" type="driver_metadata"/>
+ </Package>
+</RadiantModule>

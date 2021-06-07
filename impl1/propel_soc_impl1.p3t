@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "propel_soc_impl1.log"
+-o "propel_soc_impl1.csv"
+-pr "propel_soc_impl1.prf"
